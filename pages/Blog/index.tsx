@@ -35,19 +35,20 @@ const Blog: NextPageWithLayout = () => {
       <Grid container sx={{ spacing: { xs: 0, sm: 2, md: 2, lg: 2 }, pl: { xs: 1 } }}>
         <Grid item xs={12} sm={12} md={4} lg={4}>
           <ImageOnTopCard
-            Title="Learn SEO Right From Start To Finish Image On Right Side"
+            Title="Tata Safari - A New Era Of Endowed Cars"
             Description="In this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this World this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this World World.....!"
             href="/Blog/seo"
             ImageSrc={seo}
             ImageAlt="Coding-Image"
             tags={[
-              { tag: "seo", href: "/Blog/seo" },
-              { tag: "material ui", href: "/mui" },
-              { tag: "material ui", href: "/mui" },
+              { tag: "tata safari", href: "/Blog/seo" },
+              { tag: "safari", href: "/mui" },
+              { tag: "safari", href: "/mui" },
+              { tag: "tata", href: "/mui" },
             ]}
           />
         </Grid>
-        <Grid item xs={12} sm={12} md={4} lg={4}>
+        {/* <Grid item xs={12} sm={12} md={4} lg={4}>
           <ImageOnTopCard
             Title="Learn SEO Right From Start To Finish Image On Right Side"
             Description="In this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this World this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this World World.....!"
@@ -74,55 +75,7 @@ const Blog: NextPageWithLayout = () => {
               { tag: "material ui", href: "/mui" },
             ]}
           />
-        </Grid>
-      </Grid>
-
-      <Grid
-        container
-        sx={{ spacing: { xs: 0, sm: 2, md: 2, lg: 2 }, pl: { xs: 1 }, mt: { xs: 0, sm: 0, md: 1, lg: 1 } }}
-      >
-        <Grid item xs={12} sm={12} md={4} lg={4}>
-          <ImageOnTopCard
-            Title="Learn SEO Right From Start To Finish Image On Right Side"
-            Description="In this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this World this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this World World.....!"
-            href="/Blog/seo"
-            ImageSrc={seo}
-            ImageAlt="Coding-Image"
-            tags={[
-              { tag: "seo", href: "/Blog/seo" },
-              { tag: "material ui", href: "/mui" },
-              { tag: "material ui", href: "/mui" },
-            ]}
-          />
-        </Grid>
-        <Grid item xs={12} sm={12} md={4} lg={4}>
-          <ImageOnTopCard
-            Title="Learn SEO Right From Start To Finish Image On Right Side"
-            Description="In this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this World this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this World World.....!"
-            href="/Blog/seo"
-            ImageSrc={coding}
-            ImageAlt="Coding-Image"
-            tags={[
-              { tag: "seo", href: "/Blog/seo" },
-              { tag: "material ui", href: "/mui" },
-              { tag: "material ui", href: "/mui" },
-            ]}
-          />
-        </Grid>
-        <Grid item xs={12} sm={12} md={4} lg={4}>
-          <ImageOnTopCard
-            Title="Learn SEO Right From Start To Finish Image On Right Side"
-            Description="In this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this World this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this World World.....!"
-            href="/Blog/seo"
-            ImageSrc={coding}
-            ImageAlt="Coding-Image"
-            tags={[
-              { tag: "seo", href: "/Blog/seo" },
-              { tag: "material ui", href: "/mui" },
-              { tag: "material ui", href: "/mui" },
-            ]}
-          />
-        </Grid>
+        </Grid> */}
       </Grid>
 
       {/* Old Content Styling Below */}

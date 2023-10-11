@@ -97,7 +97,7 @@ const Seo: NextPageWithLayout = () => {
   return (
     <>
       <HeaderSection
-        title="Start learning Reactjs in easy way"
+        title="Tata safari - A new era of endowed cars"
         description="This is the Description of the webpate"
         image="https://image-url"
         url="https://blog-page-url"
@@ -109,7 +109,7 @@ const Seo: NextPageWithLayout = () => {
 
       <Grid container direction="row" sx={{ pl: { xs: 2, sm: 2, md: 0, lg: 0 }, pr: { xs: 2, sm: 2, md: 0, lg: 0 } }}>
         <Grid item md={10} lg={8}>
-          <HeadingOne title="Start learning React js in an easy way : A comprehensive guide " id="Heading Number One" />
+          <HeadingOne title="Tata safari - A new era of endowed cars" id="Heading Number One" />
 
           <Subtitle text="Learn how to create and customize a Multiselect component with Material UI and React By Karunakar Patel and he is making out this BlogPost...!" />
 
@@ -148,7 +148,7 @@ const Seo: NextPageWithLayout = () => {
             mui component...!
           </Paragraph>
 
-          <SyntaxHighlight>{code1}</SyntaxHighlight>
+          {/* <SyntaxHighlight>{code1}</SyntaxHighlight> */}
 
           <Paragraph>
             Hi this is the simple code executed by me using the following command called <Ccode>npm run start</Ccode> in
@@ -158,7 +158,7 @@ const Seo: NextPageWithLayout = () => {
 
           <Paragraph text="This is how the preview of the Code looks like This is how the preview of the Code looks likeThis is how the preview of the Code looks likeThis is how the preview of the Code looks likeThis is how the preview of the Code looks likeThis is how the preview of the Code looks likeThis is how the preview of the Code looks likeThis is how the preview of the Code looks likeThis is how the preview of the Code looks likeThis is how the preview of the Code looks likeThis is how the preview of the Code looks like" />
 
-          <SandboxCode />
+          {/* <SandboxCode /> */}
 
           <Paragraph text="Multiselect in Material UI is an extended feature to the regular select or dropdown menu that enables users to select multiple values within the same input field." />
           <Paragraph text="`hi` sdlfk `<code>one</code>`" />
@@ -167,7 +167,7 @@ const Seo: NextPageWithLayout = () => {
             Here in below is the Syntax Highlighters
           </Typography>
 
-          <SyntaxHighlight>{code1}</SyntaxHighlight>
+          {/* <SyntaxHighlight>{code1}</SyntaxHighlight> */}
 
           <Paragraph text="In this tutorial, we’ll learn how to create a multiselect component using Select and Autocomplete with a customized menu list and removable tags/chips as values." />
           <Paragraph text="MUI provides a couple of convenient options to get a feature-rich multiselect component included in our project. lorem" />
