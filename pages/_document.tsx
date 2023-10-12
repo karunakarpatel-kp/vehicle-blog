@@ -16,7 +16,7 @@ const Document: React.FC = () => {
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
 
-                gtag('config', 'G-6JKN93G7ET', {
+                gtag('config', 'G-PH29P82N32', {
                   page_path: window.location.pathname,
                 });
               `,
