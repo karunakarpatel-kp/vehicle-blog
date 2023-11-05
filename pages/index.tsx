@@ -15,6 +15,7 @@ import seo from "@Public/seo.jpg";
 
 import { ReactElement } from "react";
 import { NextPageWithLayout } from "./_app";
+import { blogPostURLS, blogPostsObj } from "sampleEssentialObj";
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -31,7 +32,7 @@ const Home: NextPageWithLayout = () => {
       <Box textAlign="center" mb={3}>
         <Typography variant="h6">Recent Articles</Typography>
       </Box>
-
+      {console.log("@BlogPostObject", blogPostsObj)}
       <Grid container sx={{ spacing: { xs: 0, sm: 2, md: 2, lg: 2 }, pl: { xs: 1 } }}>
         <Grid item xs={12} sm={12} md={4} lg={4}>
           <ImageOnTopCard
