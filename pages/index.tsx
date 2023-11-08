@@ -15,11 +15,7 @@ import seo from "@Public/seo.jpg";
 
 import { ReactElement } from "react";
 import { NextPageWithLayout } from "./_app";
-<<<<<<< HEAD
-import { blogPostURLS, blogPostsObj } from "sampleEssentialObj";
-=======
 import { SEO_OBJ, blogPostsObj } from "Essentials";
->>>>>>> Desktop
 
 const Home: NextPageWithLayout = () => {
   return (
