@@ -52,32 +52,30 @@ const ImageOnTopCard: React.FC<ImageOnTopCardProps> = (props: ImageOnTopCardProp
         </CardActionArea>
         <CardActions sx={{ flexWrap: "wrap", mt: -1 }}>
           {tags.length > 0 &&
-            tags.map((singleTag) => {
+            tags.map((singleTag, index) => {
               return (
-                <>
-                  <Link href={singleTag.href}>
-                    <Button
-                      size="small"
-                      variant="contained"
-                      sx={{
+                <Link href={singleTag.href} key={index}>
+                  <Button
+                    size="small"
+                    variant="contained"
+                    sx={{
+                      backgroundColor: themeColors.tagBgColor,
+                      color: themeColors.tabtextColor,
+                      fontWeight: "normal",
+                      borderRadius: 13,
+                      pt: 0,
+                      pb: 0,
+                      mt: 1,
+                      "&:hover": {
                         backgroundColor: themeColors.tagBgColor,
-                        color: themeColors.tabtextColor,
-                        fontWeight: "normal",
-                        borderRadius: 13,
-                        pt: 0,
-                        pb: 0,
-                        mt: 1,
-                        "&:hover": {
-                          backgroundColor: themeColors.tagBgColor,
-                          textDecoration: "underline",
-                        },
-                      }}
-                      disableElevation
-                    >
-                      {singleTag.tag}
-                    </Button>
-                  </Link>
-                </>
+                        textDecoration: "underline",
+                      },
+                    }}
+                    disableElevation
+                  >
+                    {singleTag.tag}
+                  </Button>
+                </Link>
               );
             })}
         </CardActions>
