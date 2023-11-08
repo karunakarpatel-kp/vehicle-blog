@@ -3,15 +3,32 @@ import { SEO_OBJ } from "Essentials";
 
 const Sitemap = () => {};
 
-export const getServerSideProps = ({ res }: any) => {
-  const siteData = Object.values(SEO_OBJ).map((page) => {
-    return { url: page.absoluteURL, lastUpdatedTime: page.lastUpdateTime };
+var sitemapURLOBJ: any = [];
+
+function pullURLAndLastUpdatedTime(incomingObj: any) {
+  Object.values(incomingObj).map((page: any) => {
+    sitemapURLOBJ.push({ url: page.absoluteURL, lastUpdatedTime: page.lastUpdateTime });
   });
+  return sitemapURLOBJ;
+}
+
+export const getServerSideProps = ({ res }: any) => {
+  // Pull SEO_OBJ
+  pullURLAndLastUpdatedTime(SEO_OBJ);
+
+  //  Pull TataBlogPages
+  pullURLAndLastUpdatedTime(SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ);
+
+  //  Pull KiaBlogPages
+  pullURLAndLastUpdatedTime(SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ);
+
+  // console.log(sitemapURLOBJ, "@SITEMAP_URLS");
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <!-- We'll render the URLs for our sitemap here. -->
-      ${siteData.map((singleSiteData) => {
+      ${sitemapURLOBJ.map((singleSiteData: any) => {
+        // console.log(singleSiteData, "SINGLESITEDATA");
         return `<url> <loc>${singleSiteData.url}</loc>
               <lastmod>${singleSiteData.lastUpdatedTime}</lastmod>
               <changefreq>weekly</changefreq>

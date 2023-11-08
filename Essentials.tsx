@@ -1,56 +1,4 @@
-import seoImage from "@Public/seo.jpg";
-import nextjsInstallImage from "@Public/nextjs_install.png";
-
-interface blogPostURLSProps {
-  NEXTJS_INSTALLATION_RELATIVE: string;
-  NEXTJS_INSTALLATION_ABSOLUTE: string;
-  HOME_PAGE_ABSOLUTE: string;
-  HOME_PAGE_RELATIVE: string;
-  CARS_PAGE_RELATIVE: string;
-  CARS_PAGE_ABSOLUTE: string;
-}
-
-interface blogPostsObjProps {
-  id: number;
-  url: string;
-  title: string;
-  subtitle?: string;
-  description?: string;
-  lastUpdateTime: string;
-  publishedTime: string;
-  tags: { tag: string; href: string }[];
-  featuredImage: any;
-  featuredImageAltText: string;
-}
-
-interface SEO_OBJ_Props {
-  [key: string]: {
-    absoluteURL: string;
-    relativeURL: string;
-    title: string;
-    subtitle?: string;
-    description?: string;
-    lastUpdateTime: string;
-    publishedTime: string;
-    tags?: { tag: string; href: string }[];
-    featuredImage: any;
-    featuredImageAltText: string;
-  };
-}
-
-export const BASE_URL: { HOME_PAGE_BASE_URL: string; CARS_PAGE_BASE_URL: string } = {
-  HOME_PAGE_BASE_URL: "https://www.vehiclemasti.com",
-  CARS_PAGE_BASE_URL: "https://www.vehiclemasti.com/cars",
-};
-
-export const blogPostURLS: blogPostURLSProps = {
-  HOME_PAGE_ABSOLUTE: BASE_URL.HOME_PAGE_BASE_URL,
-  HOME_PAGE_RELATIVE: "/",
-  CARS_PAGE_ABSOLUTE: BASE_URL.CARS_PAGE_BASE_URL,
-  CARS_PAGE_RELATIVE: "/cars",
-  NEXTJS_INSTALLATION_RELATIVE: "/cars/seo",
-  NEXTJS_INSTALLATION_ABSOLUTE: `${BASE_URL.CARS_PAGE_BASE_URL}/seo`,
-};
+import tataImage from "@TataImages/tata.png";
 
 export const dynamicLastUpdatedTime = () => {
   const currentDate = new Date();
@@ -64,62 +12,163 @@ export const dynamicLastUpdatedTime = () => {
   return formattedDate;
 };
 
-export const SEO_OBJ: SEO_OBJ_Props = {
+export const BASE_URLS = {
+  HOME_PAGE_BASE_URL: "https://www.vehiclemasti.com",
+  CARS_PAGE_BASE_URL: "https://www.vehiclemasti.com/cars",
+  TATA_PAGE_BASE_URL: "https://www.vehiclemasti.com/cars/tata",
+  KIA_PAGE_BASE_URL: "https://www.vehiclemasti.com/cars/kia",
+};
+
+export const blogPostURLS = {
+  HOME_PAGE_ABSOLUTE: BASE_URLS.HOME_PAGE_BASE_URL,
+  HOME_PAGE_RELATIVE: "/",
+
+  CARS_PAGE_ABSOLUTE: BASE_URLS.CARS_PAGE_BASE_URL,
+  CARS_PAGE_RELATIVE: "/cars",
+
+  TATA_COMPANY_OBJ: {
+    TATA_PAGE_ABSOLUTE: BASE_URLS.TATA_PAGE_BASE_URL,
+    TATA_PAGE_RELATIVE: "/cars/tata",
+    TATA_BLOG_PAGES: {
+      TATA_SAFARI_ABSOLUTE_URL: `${BASE_URLS.TATA_PAGE_BASE_URL}/tata_safari`,
+      TATA_SAFARI_RELATIVE_URL: "/cars/tata/tata_safari",
+    },
+  },
+
+  KIA_COMPANY_OBJ: {
+    KIA_PAGE_ABSOLUTE: BASE_URLS.KIA_PAGE_BASE_URL,
+    KIA_PAGE_RELATIVE: "/cars/kia",
+    KIA_BLOG_PAGES: {
+      KIA_SELTOS_ABSOLUTE_URL: `${BASE_URLS.KIA_PAGE_BASE_URL}/kia_seltos`,
+      KIA_SELTOS_RELATIVE_URL: "/cars/kia/kia_seltos",
+
+      KIA_SELTOS2_ABSOLUTE_URL: `${BASE_URLS.KIA_PAGE_BASE_URL}/kia_seltos2`,
+      KIA_SELTOS2_RELATIVE_URL: "/cars/kia/kia_seltos2",
+    },
+  },
+};
+
+export const SEO_OBJ = {
   // HomePage
   HOME_PAGE: {
     absoluteURL: blogPostURLS.HOME_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.HOME_PAGE_RELATIVE,
-    title: "Title of Vehicle Masti",
-    description: "Description of Vehicle Masti",
-    // lastUpdateTime: "2023-10-20T19:07:55+00:00",
+    title: "Karunakar Patel: Navigating the landscape of programming knowledge",
+    description:
+      "Explore the world of programming with Karunakar Patel, where we delve into the exciting landscape of programming knowledge. Here, you'll find simplified explanations, hands-on tutorials, practical tips, and personal experiences about programming. let's learn together step by step.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2023-10-20T19:07:55+00:00",
-    featuredImage: nextjsInstallImage,
+    featuredImage: { tataImage },
     featuredImageAltText: "a-person-with-computer",
   },
-  // Cars_Page  ==> /cars
+
+  // Cars HomePage with URL /cars
   CARS_PAGE: {
     absoluteURL: blogPostURLS.CARS_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.CARS_PAGE_RELATIVE,
-    title: "Karunakar Patel Blog: A hub for programming enthusiasts.",
-    description:
-      "Welcome to Karunakar Patel's Blog! This is the perfect place for people who love programming. You'll find easy-to-understand articles and tutorials for beginners and experienced coders alike. Join our community and let's learn and grow together in the world of coding!",
-    // lastUpdateTime: "2023-10-20T19:19:55+00:00",
+    title: "Cars page title",
+    description: "cars page description",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-    publishedTime: "2023-10-20T19:19:55+00:00",
-    featuredImage: nextjsInstallImage,
+    publishedTime: "2023-10-20T19:07:55+00:00",
+    featuredImage: tataImage,
     featuredImageAltText: "a-person-with-computer",
   },
-  // nextjs_installation
-  NEXTJS_INSTALLATION: {
-    absoluteURL: blogPostURLS.NEXTJS_INSTALLATION_ABSOLUTE,
-    relativeURL: blogPostURLS.NEXTJS_INSTALLATION_RELATIVE,
-    title: "Tata Safari: Everything You Need to Know to Own it.",
-    description:
-      "Learn how to install Next.js in an easy way. This guide provides step-by-step instructions for a smooth setup. If you are looking for seamless Next.js installation,  this tutorial has got you covered. Start building efficient and powerful web applications with Next.js today!",
-    publishedTime: "2023-10-20T19:07:55+00:00",
+
+  //  Tata HomePage with URL /cars/tata
+  TATA_HOMEPAGE: {
+    absoluteURL: blogPostURLS.TATA_COMPANY_OBJ.TATA_PAGE_ABSOLUTE,
+    relativeURL: blogPostURLS.TATA_COMPANY_OBJ.TATA_PAGE_RELATIVE,
+    title: "TATA page title in here",
+    description: " Tata page description",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-    tags: [
-      { tag: "Next.js Install", href: `${blogPostURLS.NEXTJS_INSTALLATION_RELATIVE}` },
-      { tag: "Next.js", href: `${blogPostURLS.NEXTJS_INSTALLATION_RELATIVE}` },
-      { tag: "Cars", href: `${blogPostURLS.CARS_PAGE_RELATIVE}` },
-      { tag: "Karunakar Patel", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
-    ],
-    featuredImage: nextjsInstallImage,
+    publishedTime: "2023-10-20T19:07:55+00:00",
+    featuredImage: tataImage,
     featuredImageAltText: "a-person-with-computer",
+    TATA_PAGES_OBJ: {
+      TATA_SAFARI: {
+        absoluteURL: blogPostURLS.TATA_COMPANY_OBJ.TATA_BLOG_PAGES.TATA_SAFARI_ABSOLUTE_URL,
+        relativeURL: blogPostURLS.TATA_COMPANY_OBJ.TATA_BLOG_PAGES.TATA_SAFARI_RELATIVE_URL,
+        title: "Tata Safari URL in here",
+        description: "Tata Safari Description in here...",
+        publishedTime: "2023-10-20T19:07:55+00:00",
+        lastUpdateTime: `${dynamicLastUpdatedTime()}`,
+        tags: [
+          { tag: "Cars", href: `${blogPostURLS.CARS_PAGE_RELATIVE}` },
+          { tag: "Tata", href: `${blogPostURLS.TATA_COMPANY_OBJ.TATA_PAGE_RELATIVE}` },
+          { tag: "Tata Safari", href: `${blogPostURLS.TATA_COMPANY_OBJ.TATA_BLOG_PAGES.TATA_SAFARI_RELATIVE_URL}` },
+        ],
+        featuredImage: tataImage,
+        featuredImageAltText: "a-person-with-computer",
+      },
+    },
+  },
+
+  //   Kia Automobiles with URL /cars/kia
+  KIA_HOMEPAGE: {
+    absoluteURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_ABSOLUTE,
+    relativeURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_RELATIVE,
+    title: "Kia Homepage title in here",
+    description: "Kia page description",
+    lastUpdateTime: `${dynamicLastUpdatedTime()}`,
+    publishedTime: "2023-10-20T19:07:55+00:00",
+    featuredImage: tataImage,
+    featuredImageAltText: "a-person-with-computer",
+    KIA_PAGES_OBJ: {
+      KIA_SELTOS: {
+        absoluteURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_ABSOLUTE_URL,
+        relativeURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_RELATIVE_URL,
+        title: "Kia Seltos URL in here",
+        description: "Kia Seltos Description in here...",
+        publishedTime: "2023-10-20T19:07:55+00:00",
+        lastUpdateTime: `${dynamicLastUpdatedTime()}`,
+        tags: [
+          { tag: "Cars", href: `${blogPostURLS.CARS_PAGE_RELATIVE}` },
+          { tag: "Kia", href: `${blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_RELATIVE}` },
+          { tag: "Kia Seltos", href: `${blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_RELATIVE_URL}` },
+        ],
+        featuredImageAltText: "a-person-with-computer",
+        featuredImage: tataImage,
+      },
+      KIA_SELTOS2: {
+        absoluteURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS2_ABSOLUTE_URL,
+        relativeURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS2_RELATIVE_URL,
+        title: "Kia Seltos URL in here",
+        description: "Kia Seltos Description in here...",
+        publishedTime: "2023-10-20T19:07:55+00:00",
+        lastUpdateTime: `${dynamicLastUpdatedTime()}`,
+        tags: [
+          { tag: "Cars", href: `${blogPostURLS.CARS_PAGE_RELATIVE}` },
+          { tag: "Kia", href: `${blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_RELATIVE}` },
+          { tag: "Kia Seltos", href: `${blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_RELATIVE_URL}` },
+        ],
+        featuredImageAltText: "a-person-with-computer",
+        featuredImage: tataImage,
+      },
+    },
   },
 };
 
-export const blogPostsObj: blogPostsObjProps[] = [
+export const blogPostsObj = [
   {
     id: 0,
-    url: `${blogPostURLS.NEXTJS_INSTALLATION_RELATIVE}`,
-    title: `${SEO_OBJ.NEXTJS_INSTALLATION.title}`,
-    description: `${SEO_OBJ.NEXTJS_INSTALLATION.description}`,
-    lastUpdateTime: `${SEO_OBJ.NEXTJS_INSTALLATION.lastUpdateTime}`,
-    publishedTime: `${SEO_OBJ.NEXTJS_INSTALLATION.publishedTime}`,
-    tags: SEO_OBJ.NEXTJS_INSTALLATION.tags!,
-    featuredImage: SEO_OBJ.NEXTJS_INSTALLATION.featuredImage,
-    featuredImageAltText: `${SEO_OBJ.NEXTJS_INSTALLATION.featuredImageAltText}`,
+    url: `${blogPostURLS.TATA_COMPANY_OBJ.TATA_BLOG_PAGES.TATA_SAFARI_RELATIVE_URL}`,
+    title: `${SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.title}`,
+    description: `${SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.description}`,
+    lastUpdateTime: `${SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.lastUpdateTime}`,
+    publishedTime: `${SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.publishedTime}`,
+    tags: SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.tags!,
+    featuredImage: SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.featuredImage,
+    featuredImageAltText: `${SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.featuredImageAltText}`,
+  },
+  {
+    id: 1,
+    url: `${blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_RELATIVE_URL}`,
+    title: `${SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ.KIA_SELTOS.title}`,
+    description: `${SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ.KIA_SELTOS.description}`,
+    lastUpdateTime: `${SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ.KIA_SELTOS.lastUpdateTime}`,
+    publishedTime: `${SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ.KIA_SELTOS.publishedTime}`,
+    tags: SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ.KIA_SELTOS.tags!,
+    featuredImage: SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ.KIA_SELTOS.featuredImage,
+    featuredImageAltText: `${SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ.KIA_SELTOS.featuredImageAltText}`,
   },
 ];

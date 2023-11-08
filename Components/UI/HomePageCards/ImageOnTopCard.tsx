@@ -19,7 +19,7 @@ type ImageOnTopCardProps = {
   Title: string;
   Description: string;
   href: string;
-  ImageSrc: StaticImageData;
+  ImageSrc: StaticImageData | string;
   ImageAlt: string;
   tags: { tag: string; href: string }[];
 };
