@@ -69,7 +69,7 @@ const Home: NextPageWithLayout = () => {
 
       <Box textAlign="center" mb={6} sx={{ mt: { xs: 2, sm: 2, md: 4, lg: 6 }, mb: { xs: 2, sm: 4, md: 4, lg: 6 } }}>
         <Link
-          href="/Blog"
+          href="/cars"
           style={{
             display: "flex",
             justifyContent: "center",
