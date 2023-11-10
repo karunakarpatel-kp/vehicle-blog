@@ -41,7 +41,16 @@ const ImageOnTopCard: React.FC<ImageOnTopCardProps> = (props: ImageOnTopCardProp
       <Card sx={{ maxWidth: { xs: "100%", sm: "100%", md: 330, lg: 330 }, mb: { xs: 3 } }} elevation={0}>
         <CardActionArea onClick={onCardClickHandler}>
           <CardMedia sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block" } }}>
-            <Image src={ImageSrc} alt={ImageAlt} width={330} height={212} />
+            <Image
+              src={ImageSrc}
+              alt={ImageAlt}
+              width={330}
+              height={212}
+              priority={false}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88h8AAu0B9XNPCQQAAAAASUVORK5CYII="
+              // sizes="(max-width: 768px) 100vw, (max-width : 1200px) 50vw, 33vw"
+            />
           </CardMedia>
           <CardContent sx={{ padding: "5px 10px" }}>
             <Typography gutterBottom variant="brandTitle" fontWeight={600}>
