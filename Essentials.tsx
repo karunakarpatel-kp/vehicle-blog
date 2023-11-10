@@ -1,4 +1,4 @@
-import tataImage from "@TataImages/tata.png";
+import tataImage from "@TataImages/tata-design.jpg";
 
 export const dynamicLastUpdatedTime = () => {
   const currentDate = new Date();
@@ -53,9 +53,9 @@ export const SEO_OBJ = {
   HOME_PAGE: {
     absoluteURL: blogPostURLS.HOME_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.HOME_PAGE_RELATIVE,
-    title: "Karunakar Patel: Navigating the landscape of programming knowledge",
+    title: "Vehicle Masti: A hub for Automobile enthusiasts.",
     description:
-      "Explore the world of programming with Karunakar Patel, where we delve into the exciting landscape of programming knowledge. Here, you'll find simplified explanations, hands-on tutorials, practical tips, and personal experiences about programming. let's learn together step by step.",
+      "Welcome to VehicleMasti Blog! This is the perfect place for people who love automobiles whether you are a car enthusiast or a casual driver. You'll find easy-to-understand articles, maintenance tips, and reviews about different automobile manufacturers. Our engaging content provides to all levels of automotive interest. Stay updated and dive into the exciting world of Innovative automobiles with us! Join our community and let's learn and grow together in the world of automobiles!",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2023-10-20T19:07:55+00:00",
     featuredImage: { tataImage },
@@ -66,8 +66,9 @@ export const SEO_OBJ = {
   CARS_PAGE: {
     absoluteURL: blogPostURLS.CARS_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.CARS_PAGE_RELATIVE,
-    title: "Cars page title",
-    description: "cars page description",
+    title: "Cars: A Hub for Cars Enthusiasts | VehicleMasti",
+    description:
+      "Welcome to VehicleMasti, a car informational page where I share my passion for cars and everything related to them. Here, I will write about different types of cars, their features, advantages, reviews, latest news, prices, comparisons, disadvantages, tips, tricks, and many more. Stay updated with the latest news about cars and let us learn and grow together in the world of innovative cars.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2023-10-20T19:07:55+00:00",
     featuredImage: tataImage,
@@ -78,8 +79,9 @@ export const SEO_OBJ = {
   TATA_HOMEPAGE: {
     absoluteURL: blogPostURLS.TATA_COMPANY_OBJ.TATA_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.TATA_COMPANY_OBJ.TATA_PAGE_RELATIVE,
-    title: "TATA page title in here",
-    description: " Tata page description",
+    title: "Tata Automobiles: A Hub for Tata Cars Enthusiasts | VehicleMasti",
+    description:
+      "Welcome to VehicleMasti, a Tata Motors car informational page where I share my passion for Tata cars and everything related to them. Here, I will write about different variants of Tata cars, their features, advantages, reviews, latest news, prices, comparisons, disadvantages, tips, tricks, and many more. Stay updated with the latest news about different variants of Tata cars and let us learn and grow together in the world of innovative Tata cars.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2023-10-20T19:07:55+00:00",
     featuredImage: tataImage,
@@ -88,8 +90,9 @@ export const SEO_OBJ = {
       TATA_SAFARI: {
         absoluteURL: blogPostURLS.TATA_COMPANY_OBJ.TATA_BLOG_PAGES.TATA_SAFARI_ABSOLUTE_URL,
         relativeURL: blogPostURLS.TATA_COMPANY_OBJ.TATA_BLOG_PAGES.TATA_SAFARI_RELATIVE_URL,
-        title: "Tata Safari URL in here",
-        description: "Tata Safari Description in here...",
+        title: "Tata Safari Facelift 2023: An ultimate guide to Tata Safari car.",
+        description:
+          "Here is the ultimate guide to the Tata Safari car, where everything you need to know about this car. Here, I will highlight about Tata Safari 2023 facelift car, prices, reviews, exterior, interior, mileage, color, images, facelift, on-road prices, power, comfort, and many more about the Tata Safari car. Read on to find it more.",
         publishedTime: "2023-10-20T19:07:55+00:00",
         lastUpdateTime: `${dynamicLastUpdatedTime()}`,
         tags: [
@@ -104,48 +107,34 @@ export const SEO_OBJ = {
   },
 
   //   Kia Automobiles with URL /cars/kia
-  KIA_HOMEPAGE: {
-    absoluteURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_ABSOLUTE,
-    relativeURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_RELATIVE,
-    title: "Kia Homepage title in here",
-    description: "Kia page description",
-    lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-    publishedTime: "2023-10-20T19:07:55+00:00",
-    featuredImage: tataImage,
-    featuredImageAltText: "a-person-with-computer",
-    KIA_PAGES_OBJ: {
-      KIA_SELTOS: {
-        absoluteURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_ABSOLUTE_URL,
-        relativeURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_RELATIVE_URL,
-        title: "Kia Seltos URL in here",
-        description: "Kia Seltos Description in here...",
-        publishedTime: "2023-10-20T19:07:55+00:00",
-        lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-        tags: [
-          { tag: "Cars", href: `${blogPostURLS.CARS_PAGE_RELATIVE}` },
-          { tag: "Kia", href: `${blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_RELATIVE}` },
-          { tag: "Kia Seltos", href: `${blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_RELATIVE_URL}` },
-        ],
-        featuredImageAltText: "a-person-with-computer",
-        featuredImage: tataImage,
-      },
-      KIA_SELTOS2: {
-        absoluteURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS2_ABSOLUTE_URL,
-        relativeURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS2_RELATIVE_URL,
-        title: "Kia Seltos URL in here",
-        description: "Kia Seltos Description in here...",
-        publishedTime: "2023-10-20T19:07:55+00:00",
-        lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-        tags: [
-          { tag: "Cars", href: `${blogPostURLS.CARS_PAGE_RELATIVE}` },
-          { tag: "Kia", href: `${blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_RELATIVE}` },
-          { tag: "Kia Seltos", href: `${blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_RELATIVE_URL}` },
-        ],
-        featuredImageAltText: "a-person-with-computer",
-        featuredImage: tataImage,
-      },
-    },
-  },
+  // KIA_HOMEPAGE: {
+  //   absoluteURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_ABSOLUTE,
+  //   relativeURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_RELATIVE,
+  //   title: "Kia Automobiles: A hub for Kia Cars enthusiast | VehicleMasti",
+  //   description:
+  //     "Welcome to VehicleMasti, a Kia Motors car informational page where I share my passion for Kia cars and everything related to them. Here, I will write about different variants of Kia cars, their features, advantages, reviews, latest news, prices, comparisons, disadvantages, tips, tricks, and many more. Stay updated with the latest news about different variants of Kia cars and let us learn and grow together in the world of innovative Kia cars.",
+  //   lastUpdateTime: `${dynamicLastUpdatedTime()}`,
+  //   publishedTime: "2023-10-20T19:07:55+00:00",
+  //   featuredImage: tataImage,
+  //   featuredImageAltText: "a-person-with-computer",
+  //   KIA_PAGES_OBJ: {
+  //     KIA_SELTOS: {
+  //       absoluteURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_ABSOLUTE_URL,
+  //       relativeURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_RELATIVE_URL,
+  //       title: "Kia Seltos URL in here",
+  //       description: "Kia Seltos Description in here...",
+  //       publishedTime: "2023-10-20T19:07:55+00:00",
+  //       lastUpdateTime: `${dynamicLastUpdatedTime()}`,
+  //       tags: [
+  //         { tag: "Cars", href: `${blogPostURLS.CARS_PAGE_RELATIVE}` },
+  //         { tag: "Kia", href: `${blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_RELATIVE}` },
+  //         { tag: "Kia Seltos", href: `${blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_RELATIVE_URL}` },
+  //       ],
+  //       featuredImageAltText: "a-person-with-computer",
+  //       featuredImage: tataImage,
+  //     },
+  //   },
+  // },
 };
 
 export const blogPostsObj = [
@@ -159,16 +148,5 @@ export const blogPostsObj = [
     tags: SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.tags!,
     featuredImage: SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.featuredImage,
     featuredImageAltText: `${SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.featuredImageAltText}`,
-  },
-  {
-    id: 1,
-    url: `${blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_RELATIVE_URL}`,
-    title: `${SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ.KIA_SELTOS.title}`,
-    description: `${SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ.KIA_SELTOS.description}`,
-    lastUpdateTime: `${SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ.KIA_SELTOS.lastUpdateTime}`,
-    publishedTime: `${SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ.KIA_SELTOS.publishedTime}`,
-    tags: SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ.KIA_SELTOS.tags!,
-    featuredImage: SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ.KIA_SELTOS.featuredImage,
-    featuredImageAltText: `${SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ.KIA_SELTOS.featuredImageAltText}`,
   },
 ];
