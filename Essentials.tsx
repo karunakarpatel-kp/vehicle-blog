@@ -1,4 +1,4 @@
-import tataImage from "@TataImages/tata.png";
+import tataImage from "@TataImages/tata-design.jpg";
 
 export const dynamicLastUpdatedTime = () => {
   const currentDate = new Date();

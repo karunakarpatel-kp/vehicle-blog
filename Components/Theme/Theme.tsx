@@ -110,6 +110,7 @@ Theme = createTheme(Theme, {
       fontSize: "1.26rem",
       fontWeight: "400",
       fontFamily: "WotfardLight",
+
       color: "rgb(31,34,38)",
       lineHeight: "2rem",
       letterSpacing: "0",
@@ -135,6 +136,7 @@ Theme = createTheme(Theme, {
     // Image On Top Title Goes Here
     brandTitle: {
       fontFamily: "Wotfard",
+
       fontSize: "1.6rem",
       letterSpacing: "0",
       fontWeight: "600",
@@ -217,6 +219,7 @@ Theme = createTheme(Theme, {
 
     blogPostBrandTitle: {
       fontFamily: "Wotfard",
+
       fontSize: "2rem",
       letterSpacing: "0",
       fontWeight: "600",
@@ -321,6 +324,7 @@ Theme = createTheme(Theme, {
 
     blogPostBrandHeadingFive: {
       fontFamily: "Wotfard",
+
       fontSize: "1.25rem",
       letterSpacing: "0",
       fontWeight: "599",
@@ -347,6 +351,7 @@ Theme = createTheme(Theme, {
 
     blogPostBrandHeadingSix: {
       fontFamily: "Wotfard",
+
       fontSize: "1.199rem",
       letterSpacing: "0",
       fontWeight: "599",
@@ -401,6 +406,7 @@ Theme = createTheme(Theme, {
 
     h1: {
       fontFamily: "Wotfard",
+
       fontSize: "2rem",
       letterSpacing: "0",
       fontWeight: "600",
@@ -426,6 +432,7 @@ Theme = createTheme(Theme, {
     },
     h2: {
       fontFamily: "Wotfard",
+
       fontSize: "1.5rem",
       letterSpacing: "0",
       // fontWeight: "bold",
@@ -451,6 +458,7 @@ Theme = createTheme(Theme, {
     },
     h3: {
       fontFamily: "Wotfard",
+
       fontSize: "1.4rem",
       letterSpacing: "0",
       // fontWeight: "bold",
@@ -476,6 +484,7 @@ Theme = createTheme(Theme, {
     },
     h4: {
       fontFamily: "Wotfard",
+
       fontSize: "1.3rem",
       letterSpacing: "0",
       // fontWeight: "bold",
@@ -502,6 +511,7 @@ Theme = createTheme(Theme, {
     h5: {
       fontFamily: "Wotfard",
       fontSize: "1.3rem",
+
       letterSpacing: "0",
       // fontWeight: "bold",
       lineHeight: "36px",
@@ -527,6 +537,7 @@ Theme = createTheme(Theme, {
     h6: {
       fontFamily: "Wotfard",
       fontSize: "1.3rem",
+
       letterSpacing: "0",
       // fontWeight: "bold",
       lineHeight: "36px",
@@ -551,6 +562,7 @@ Theme = createTheme(Theme, {
     },
     body1: {
       fontSize: "1.1rem",
+
       fontWeight: "normal",
       fontFamily: "Wotfard",
       color: "#8890a0",
@@ -576,6 +588,7 @@ Theme = createTheme(Theme, {
     },
     body2: {
       fontSize: "1.3rem",
+
       fontWeight: "normal",
       fontFamily: "Wotfard",
       lineHeight: "36px",
@@ -624,9 +637,10 @@ Theme = createTheme(Theme, {
       "@global": {
         "@font-face": {
           fontFamily: "Wotfard",
-          src: 'url(/fonts/Wotfard-Regular.otf) format("truetype)',
+          src: 'url(/fonts/Wotfard-Regular.otf) format("truetype")',
           fontWeight: "normal",
           fontStyle: "normal",
+          fontDisplay: "swap",
         },
       },
     },

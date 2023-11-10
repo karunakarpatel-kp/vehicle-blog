@@ -1,3 +1,5 @@
+import React from "react";
+
 export const tataVehicleObj = {
   OVERVIEW: {
     OVERVIEW_DESC: "Overview Description in here",
@@ -185,3 +187,9 @@ export const tataVehicleObj = {
     },
   },
 };
+
+const defaultExports = () => {
+  return <div>TataVehicleObj</div>;
+};
+
+export default defaultExports;

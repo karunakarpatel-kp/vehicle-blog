@@ -19,9 +19,6 @@ export const getServerSideProps = ({ res }: any) => {
   //  Pull TataBlogPages
   pullURLAndLastUpdatedTime(SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ);
 
-  //  Pull KiaBlogPages
-  pullURLAndLastUpdatedTime(SEO_OBJ.KIA_HOMEPAGE.KIA_PAGES_OBJ);
-
   // console.log(sitemapURLOBJ, "@SITEMAP_URLS");
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

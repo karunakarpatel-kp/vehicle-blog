@@ -4,7 +4,7 @@ import React from "react";
 
 interface HeaderImageFullBlogPostProps {
   alt: string;
-  image: StaticImageData;
+  image: StaticImageData | string;
 }
 
 const HeaderImageFullBlogPost = (props: HeaderImageFullBlogPostProps) => {
