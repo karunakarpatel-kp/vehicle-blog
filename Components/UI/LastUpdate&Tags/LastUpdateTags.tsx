@@ -45,32 +45,30 @@ const LastUpdateTags = (props: LastUpdatedTagsProps) => {
         >
           <Box sx={{ "&.MuiBox-root": { marginTop: "-4px" } }}>
             {tags.length > 0 &&
-              tags.map((singleTag) => {
+              tags.map((singleTag, index) => {
                 return (
-                  <>
-                    <Link href={singleTag.href} style={{ marginRight: "8px" }}>
-                      <Button
-                        size="small"
-                        variant="contained"
-                        sx={{
+                  <Link href={singleTag.href} style={{ marginRight: "8px" }} key={index}>
+                    <Button
+                      size="small"
+                      variant="contained"
+                      sx={{
+                        backgroundColor: themeColors.tagBgColor,
+                        color: themeColors.tabtextColor,
+                        fontWeight: "normal",
+                        borderRadius: 13,
+                        pt: 0,
+                        pb: 0,
+                        mt: 1,
+                        "&:hover": {
                           backgroundColor: themeColors.tagBgColor,
-                          color: themeColors.tabtextColor,
-                          fontWeight: "normal",
-                          borderRadius: 13,
-                          pt: 0,
-                          pb: 0,
-                          mt: 1,
-                          "&:hover": {
-                            backgroundColor: themeColors.tagBgColor,
-                            textDecoration: "underline",
-                          },
-                        }}
-                        disableElevation
-                      >
-                        {singleTag.tag}
-                      </Button>
-                    </Link>
-                  </>
+                          textDecoration: "underline",
+                        },
+                      }}
+                      disableElevation
+                    >
+                      {singleTag.tag}
+                    </Button>
+                  </Link>
                 );
               })}
           </Box>
