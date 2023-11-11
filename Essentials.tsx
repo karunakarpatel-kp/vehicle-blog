@@ -1,5 +1,6 @@
 import tataImage from "@TataImages/tata-design.jpg";
 import TataPersona from "@TataImages/iconic-roof-rails-with-chrome-inserts-27-23.jpg";
+import TataWelcomeImage from "@TataImages/safari-overview-d-banner-27-23.jpg";
 
 export const dynamicLastUpdatedTime = () => {
   const currentDate = new Date();
@@ -101,7 +102,7 @@ export const SEO_OBJ = {
           { tag: "Tata", href: `${blogPostURLS.TATA_COMPANY_OBJ.TATA_PAGE_RELATIVE}` },
           { tag: "Tata Safari", href: `${blogPostURLS.TATA_COMPANY_OBJ.TATA_BLOG_PAGES.TATA_SAFARI_RELATIVE_URL}` },
         ],
-        featuredImage: TataPersona,
+        featuredImage: TataWelcomeImage,
         featuredImageAltText: "a-person-with-computer",
       },
     },

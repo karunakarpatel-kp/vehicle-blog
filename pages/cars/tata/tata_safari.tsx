@@ -37,6 +37,8 @@ import Sharing from "@Components/SocialShare/Sharing";
 import { blogPostsObj, blogPostURLS, SEO_OBJ } from "Essentials";
 import { NextPageWithLayout } from "pages/_app";
 import HighlightText from "@Components/SyntaxHighlighter/HighlightText";
+import ScrollableTabs from "@Components/UI/Tabs/BasicTabs";
+import BasicTable from "@Components/UI/Tables/BasicTable";
 
 interface TableOfContentsListProps {
   id: string;
@@ -172,6 +174,9 @@ const TataSafari: NextPageWithLayout = () => {
           </Grid>
           <Paragraph text="Okay, now let's get our hands dirty with the installation of Next.js." />
 
+          {/* Tabs in Here */}
+          <ScrollableTabs />
+
           {/* SECOND HEADING */}
           <HeadingTwo id="install_next.js" title="Install Next.js" />
 
@@ -181,6 +186,8 @@ const TataSafari: NextPageWithLayout = () => {
 
           <Paragraph text="Before getting, there are two ways in which we can install Next.js, one is the Automatic Installation and the other is manual Installation. Both work in the same way. The automatic installation will complete all the setup by one single command whereas less manual installation will complete by two to three commands. It's up to you which installation method you choose, either way in this article I will explain both ways of installation methods." />
 
+          {/* <BasicTable /> */}
+          <BasicTable />
           <Paragraph text="Let's dig into Automatic Installation of Next.js " />
 
           <HeadingThree id="automatic_installation_of_next.js" title="Automatic Installation of Next.js" />
@@ -348,44 +355,68 @@ const TataSafari: NextPageWithLayout = () => {
                   </a>
                 </li>
                 <li className="listItemContent">
+                  <a href="#introduction" onClick={scrollIntoView} className="listItemLinkContent">
+                    Tata Safari Key Features
+                  </a>
+                </li>
+                <li className="listItemContent inside_ele">
                   <a href="#what_is_next.js" onClick={scrollIntoView} className="listItemLinkContent">
-                    What is Next.js?
+                    The Grand Design
                   </a>
                 </li>
-                <li className="listItemContent">
+                <li className="listItemContent inside_ele">
                   <a href="#install_next.js" onClick={scrollIntoView} className="listItemLinkContent">
-                    Install Next.js
+                    The Safest Space
                   </a>
                 </li>
-                {/* Inner Container */}
                 <li className="listItemContent inside_ele">
                   <a href="#automatic_installation_of_next.js" onClick={scrollIntoView} className="listItemLinkContent">
-                    Automatic installation of Next.js
+                    ADAS
                   </a>
                 </li>
 
                 <li className="listItemContent inside_ele">
                   <a href="#manual_installation_of_next.js" onClick={scrollIntoView} className="listItemLinkContent">
-                    Manual installation of Next.js
+                    The Tech Appeal
                   </a>
                 </li>
-                <li className="listItemContent">
+                <li className="listItemContent inside_ele">
                   <a href="#create_app_directory" onClick={scrollIntoView} className="listItemLinkContent">
-                    Create App Directory
+                    The Power Play
                   </a>
                 </li>
-                <li className="listItemContent">
+                <li className="listItemContent inside_ele">
                   <a
                     href="#run_the_development_server_of_next.js"
                     onClick={scrollIntoView}
                     className="listItemLinkContent"
                   >
-                    Run the development server
+                    The Comfort Zone
                   </a>
                 </li>
                 <li className="listItemContent">
                   <a href="#frequently_asked_questions" onClick={scrollIntoView} className="listItemLinkContent">
-                    Frequently Asked Questions
+                    Specifications
+                  </a>
+                </li>
+                <li className="listItemContent">
+                  <a href="#discussions" onClick={scrollIntoView} className="listItemLinkContent">
+                    Colors
+                  </a>
+                </li>
+                <li className="listItemContent">
+                  <a href="#discussions" onClick={scrollIntoView} className="listItemLinkContent">
+                    Persona
+                  </a>
+                </li>
+                <li className="listItemContent">
+                  <a href="#discussions" onClick={scrollIntoView} className="listItemLinkContent">
+                    Price
+                  </a>
+                </li>
+                <li className="listItemContent">
+                  <a href="#discussions" onClick={scrollIntoView} className="listItemLinkContent">
+                    Downloads
                   </a>
                 </li>
                 <li className="listItemContent">
@@ -397,7 +428,7 @@ const TataSafari: NextPageWithLayout = () => {
 
               {/* Social Sharing Icons Are below */}
               <Box>
-                <Sharing url={completeURL} title="This is the title of the Blog Post" />
+                <Sharing url={completeURL} title={SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.title} />
               </Box>
             </Box>
           </Box>

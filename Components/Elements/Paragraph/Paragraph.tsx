@@ -5,7 +5,7 @@ import React, { ReactNode } from "react";
 
 interface ParagraphProps {
   id?: string;
-  text?: string;
+  text?: string | ReactNode;
   variant?: string;
   children?: string | JSX.Element | JSX.Element[] | string[] | (string | JSX.Element)[];
 }
