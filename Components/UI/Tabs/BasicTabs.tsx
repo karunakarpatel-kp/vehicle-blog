@@ -61,7 +61,6 @@ export default function BasicTabs() {
               "&.Mui-disabled": { opacity: 0.3 },
             },
             borderBottom: "1px solid #f6f6f6",
-            overflow: "scroll",
             width: { xs: 400, sm: 700, md: "100%", lg: "100%" },
           }}
         >
