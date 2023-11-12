@@ -39,6 +39,7 @@ import { NextPageWithLayout } from "pages/_app";
 import HighlightText from "@Components/SyntaxHighlighter/HighlightText";
 import ScrollableTabs from "@Components/UI/Tabs/BasicTabs";
 import BasicTable from "@Components/UI/Tables/BasicTable";
+import BasicTable2 from "@Components/UI/Tables/BasicTable2";
 
 interface TableOfContentsListProps {
   id: string;
@@ -176,6 +177,8 @@ const TataSafari: NextPageWithLayout = () => {
 
           {/* Tabs in Here */}
           <ScrollableTabs />
+
+          <Paragraph text="Okay, now let's get our hands dirty with the installation of Next.js." />
 
           {/* SECOND HEADING */}
           <HeadingTwo id="install_next.js" title="Install Next.js" />

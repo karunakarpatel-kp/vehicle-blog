@@ -115,3 +115,9 @@ a:hover {
 a:hover::before {
   transform: scaleX(1);
 } */
+
+.MuiTabs-indicator {
+  background-color: white;
+  bottom: 6px;
+  height: 1px;
+}

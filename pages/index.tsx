@@ -32,7 +32,6 @@ const Home: NextPageWithLayout = () => {
       <Box textAlign="center" mb={3}>
         <Typography variant="h6">Recent Articles</Typography>
       </Box>
-      {console.log("@BlogPostObject", blogPostsObj)}
       <Grid container sx={{ spacing: { xs: 0, sm: 2, md: 2, lg: 2 }, pl: { xs: 1 } }}>
         {blogPostsObj.map((singlePostObj) => {
           return (

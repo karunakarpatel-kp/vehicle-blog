@@ -47,7 +47,7 @@ export default function BasicTabs() {
 
   return (
     <>
-      <Box sx={{ border: "1px solid rgba(54, 16, 106, 0.2)", borderRadius: 2 }}>
+      <Box sx={{ border: "1px solid rgba(54, 16, 106, 0.1)", borderRadius: 2 }}>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -58,16 +58,42 @@ export default function BasicTabs() {
           orientation="horizontal"
           sx={{
             [`& .${tabsClasses.scrollButtons}`]: {
-              "&.Mui-disabled": { opacity: 0.3 },
+              "&.Mui-disabled": { opacity: 1 },
             },
-            borderBottom: "1px solid #f6f6f6",
+            backgroundColor: "rgb(94, 63, 135)",
+            borderTopLeftRadius: 4,
+            borderTopRightRadius: 4,
+            color: "white",
             width: { xs: 400, sm: 700, md: "100%", lg: "100%" },
           }}
         >
-          <Tab label="Tata Safari Specifications" {...a11yProps(0)} />
-          <Tab label="Tata Safari Price" {...a11yProps(0)} />
-          <Tab label="On-road prices" {...a11yProps(1)} />
-          <Tab label="Item Four" {...a11yProps(2)} />
+          <Tab
+            label="Tata Safari Specifications"
+            {...a11yProps(0)}
+            disableRipple
+            disableFocusRipple
+            disableTouchRipple
+            sx={{
+              color: "white",
+              "&.Mui-selected": { color: "white", p: 0 },
+              // "&.MuiTabs-indicator": { backgroundColor: "white" },
+            }}
+          />
+          <Tab
+            label="Tata Safari Price"
+            {...a11yProps(0)}
+            sx={{ color: "white", "&.Mui-selected": { color: "white", p: 0 } }}
+          />
+          <Tab
+            label="On-road prices"
+            {...a11yProps(1)}
+            sx={{ color: "white", "&.Mui-selected": { color: "white", p: 0 } }}
+          />
+          <Tab
+            label="Item Four"
+            {...a11yProps(2)}
+            sx={{ color: "white", "&.Mui-selected": { color: "white", p: 0 } }}
+          />
         </Tabs>
 
         <CustomTabPanel value={value} index={0}>
