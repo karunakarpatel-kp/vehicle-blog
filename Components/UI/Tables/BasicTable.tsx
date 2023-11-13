@@ -44,7 +44,21 @@ const rows = [
   createData("Karunakar Patel Score", 356, 16.0, 49, 3.9),
 ];
 
-export default function BasicTable() {
+interface BasicTableProps {
+  tableHeads: {
+    id: number;
+    title: string;
+    align?: "left" | "right" | "center" | "justify";
+  }[];
+  tableData: {
+    id: number;
+    Data: (string | number | boolean)[];
+    align?: "left" | "right" | "center" | "justify";
+  }[];
+}
+
+const BasicTable = (props: BasicTableProps) => {
+  const { tableHeads, tableData } = props;
   return (
     <TableContainer
       component={Paper}
@@ -54,27 +68,43 @@ export default function BasicTable() {
       <Table aria-label="customized table" size="small">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Tata Safari Variants</StyledTableCell>
-            <StyledTableCell align="right">Mileage</StyledTableCell>
-            <StyledTableCell align="right">Prices</StyledTableCell>
-            <StyledTableCell align="right">Carbs&nbsp;(g)</StyledTableCell>
-            <StyledTableCell align="right">Protein&nbsp;(g)</StyledTableCell>
+            {tableHeads.map(
+              (singleTableHead: { id: number; title: string; align?: "left" | "right" | "center" | "justify" }) => {
+                const { id, title, align } = singleTableHead;
+                return (
+                  <StyledTableCell align={align} key={id}>
+                    {title}
+                  </StyledTableCell>
+                );
+              }
+            )}
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell component="th" scope="row">
-                {row.name}
-              </StyledTableCell>
-              <StyledTableCell align="right">{row.calories}</StyledTableCell>
-              <StyledTableCell align="right">{row.fat}</StyledTableCell>
-              <StyledTableCell align="right">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="right">{row.protein}</StyledTableCell>
-            </StyledTableRow>
-          ))}
+          {tableData.map(
+            (singleTableData: {
+              id: number;
+              Data: (string | number | boolean)[];
+              align?: "left" | "right" | "center" | "justify";
+            }) => {
+              const { id, Data, align } = singleTableData;
+              return (
+                <StyledTableRow key={id}>
+                  {Data.map((singleDataInArray: any, index) => {
+                    return (
+                      <StyledTableCell align={align ? align : "left"} key={index}>
+                        {singleDataInArray}
+                      </StyledTableCell>
+                    );
+                  })}
+                </StyledTableRow>
+              );
+            }
+          )}
         </TableBody>
       </Table>
     </TableContainer>
   );
-}
+};
+
+export default BasicTable;

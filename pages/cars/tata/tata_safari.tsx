@@ -176,7 +176,27 @@ const TataSafari: NextPageWithLayout = () => {
           <Paragraph text="Okay, now let's get our hands dirty with the installation of Next.js." />
 
           {/* Tabs in Here */}
-          <ScrollableTabs />
+          <ScrollableTabs
+            tabsData={[
+              { id: 0, label: "One" },
+              { id: 1, label: "Two" },
+              { id: 2, label: "Three" },
+            ]}
+            customTabPanelData={[
+              {
+                index: 0,
+                text: "One text for one...!",
+              },
+              {
+                index: 1,
+                text: "Two text for one...!",
+              },
+              {
+                index: 2,
+                text: "To install Next.js, you need to have Node.js installed on your local machine. Make sure that you have the latest LTS version of node.js. To check the version of node.js just type node -v in your terminal and compare the version with the LTS version listed on the Node.js official website.",
+              },
+            ]}
+          />
 
           <Paragraph text="Okay, now let's get our hands dirty with the installation of Next.js." />
 
@@ -190,7 +210,27 @@ const TataSafari: NextPageWithLayout = () => {
           <Paragraph text="Before getting, there are two ways in which we can install Next.js, one is the Automatic Installation and the other is manual Installation. Both work in the same way. The automatic installation will complete all the setup by one single command whereas less manual installation will complete by two to three commands. It's up to you which installation method you choose, either way in this article I will explain both ways of installation methods." />
 
           {/* <BasicTable /> */}
-          <BasicTable />
+          {/* <BasicTable /> */}
+
+          <BasicTable
+            tableHeads={[
+              { id: 0, align: "left", title: "First Header" },
+              { id: 1, align: "center", title: "Second Header" },
+              { id: 2, align: "center", title: "On-Road Price" },
+              { id: 3, align: "center", title: "Mileage" },
+              { id: 4, align: "center", title: "Fifth Header" },
+            ]}
+            tableData={[
+              { id: 0, align: "center", Data: ["Frozen yoghurt", 159, 6.0, 24, 4.0] },
+              { id: 1, align: "center", Data: ["Frozen yoghurt", 159, "karunakar Patel", "NA", 4.0] },
+              {
+                id: 2,
+                align: "center",
+                Data: ["Frozen yoghurt", 159, "karunakar Patel", "NA", "this is an e had ble body...!"],
+              },
+            ]}
+          />
+
           <Paragraph text="Let's dig into Automatic Installation of Next.js " />
 
           <HeadingThree id="automatic_installation_of_next.js" title="Automatic Installation of Next.js" />

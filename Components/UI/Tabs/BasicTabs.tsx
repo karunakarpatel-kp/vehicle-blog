@@ -38,7 +38,19 @@ function a11yProps(index: number) {
   };
 }
 
-export default function BasicTabs() {
+interface BasicTabsProps {
+  tabsData: {
+    id: number;
+    label: string;
+  }[];
+  customTabPanelData: {
+    index: number;
+    text: string;
+  }[];
+}
+
+const BasicTabs = (props: BasicTabsProps) => {
+  const { tabsData, customTabPanelData } = props;
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -67,8 +79,42 @@ export default function BasicTabs() {
             width: { xs: 400, sm: 700, md: "100%", lg: "100%" },
           }}
         >
-          <Tab
-            label="Tata Safari Specifications"
+          {tabsData.map((singleTab: { id: number; label: string }) => {
+            const { id, label } = singleTab;
+            return (
+              <Tab
+                key={id}
+                label={label}
+                {...a11yProps(id)}
+                disableRipple
+                disableFocusRipple
+                disableTouchRipple
+                sx={{
+                  color: "white",
+                  "&.Mui-selected": { color: "white", p: 0 },
+                }}
+              />
+            );
+          })}
+        </Tabs>
+        {customTabPanelData.map((singleCustomTabPanel: { index: number; text: string }) => {
+          const { index, text } = singleCustomTabPanel;
+          return (
+            <CustomTabPanel value={value} index={index} key={index}>
+              {text}
+            </CustomTabPanel>
+          );
+        })}
+      </Box>
+    </>
+  );
+};
+
+export default BasicTabs;
+
+{
+  /* <Tab
+            label="Two"
             {...a11yProps(0)}
             disableRipple
             disableFocusRipple
@@ -78,36 +124,10 @@ export default function BasicTabs() {
               "&.Mui-selected": { color: "white", p: 0 },
               // "&.MuiTabs-indicator": { backgroundColor: "white" },
             }}
-          />
-          <Tab
-            label="Tata Safari Price"
-            {...a11yProps(0)}
-            sx={{ color: "white", "&.Mui-selected": { color: "white", p: 0 } }}
-          />
-          <Tab
-            label="On-road prices"
-            {...a11yProps(1)}
-            sx={{ color: "white", "&.Mui-selected": { color: "white", p: 0 } }}
-          />
-          <Tab
-            label="Item Four"
-            {...a11yProps(2)}
-            sx={{ color: "white", "&.Mui-selected": { color: "white", p: 0 } }}
-          />
-        </Tabs>
-
-        <CustomTabPanel value={value} index={0}>
-          One Paragraph is here
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={1}>
-          Second paragraph is here
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={2}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum maiores quo inventore corporis perspiciatis
-          dignissimos expedita officiis ab praesentium! Exercitationem!
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={3}></CustomTabPanel>
-      </Box>
-    </>
-  );
+          /> */
+}
+{
+  /* <CustomTabPanel value={value} index={1}>
+              Second Paragraph is here
+            </CustomTabPanel> */
 }
