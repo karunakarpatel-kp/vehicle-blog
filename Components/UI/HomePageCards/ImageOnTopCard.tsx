@@ -19,7 +19,7 @@ type ImageOnTopCardProps = {
   Title: string;
   Description: string;
   href: string;
-  ImageSrc: StaticImageData;
+  ImageSrc: StaticImageData | string;
   ImageAlt: string;
   tags: { tag: string; href: string }[];
 };
@@ -41,7 +41,16 @@ const ImageOnTopCard: React.FC<ImageOnTopCardProps> = (props: ImageOnTopCardProp
       <Card sx={{ maxWidth: { xs: "100%", sm: "100%", md: 330, lg: 330 }, mb: { xs: 3 } }} elevation={0}>
         <CardActionArea onClick={onCardClickHandler}>
           <CardMedia sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block" } }}>
-            <Image src={ImageSrc} alt={ImageAlt} width={330} height={212} />
+            <Image
+              src={ImageSrc}
+              alt={ImageAlt}
+              width={330}
+              height={212}
+              priority={false}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88h8AAu0B9XNPCQQAAAAASUVORK5CYII="
+              // sizes="(max-width: 768px) 100vw, (max-width : 1200px) 50vw, 33vw"
+            />
           </CardMedia>
           <CardContent sx={{ padding: "5px 10px" }}>
             <Typography gutterBottom variant="brandTitle" fontWeight={600}>
@@ -52,32 +61,30 @@ const ImageOnTopCard: React.FC<ImageOnTopCardProps> = (props: ImageOnTopCardProp
         </CardActionArea>
         <CardActions sx={{ flexWrap: "wrap", mt: -1 }}>
           {tags.length > 0 &&
-            tags.map((singleTag) => {
+            tags.map((singleTag, index) => {
               return (
-                <>
-                  <Link href={singleTag.href}>
-                    <Button
-                      size="small"
-                      variant="contained"
-                      sx={{
+                <Link href={singleTag.href} key={index}>
+                  <Button
+                    size="small"
+                    variant="contained"
+                    sx={{
+                      backgroundColor: themeColors.tagBgColor,
+                      color: themeColors.tabtextColor,
+                      fontWeight: "normal",
+                      borderRadius: 13,
+                      pt: 0,
+                      pb: 0,
+                      mt: 1,
+                      "&:hover": {
                         backgroundColor: themeColors.tagBgColor,
-                        color: themeColors.tabtextColor,
-                        fontWeight: "normal",
-                        borderRadius: 13,
-                        pt: 0,
-                        pb: 0,
-                        mt: 1,
-                        "&:hover": {
-                          backgroundColor: themeColors.tagBgColor,
-                          textDecoration: "underline",
-                        },
-                      }}
-                      disableElevation
-                    >
-                      {singleTag.tag}
-                    </Button>
-                  </Link>
-                </>
+                        textDecoration: "underline",
+                      },
+                    }}
+                    disableElevation
+                  >
+                    {singleTag.tag}
+                  </Button>
+                </Link>
               );
             })}
         </CardActions>

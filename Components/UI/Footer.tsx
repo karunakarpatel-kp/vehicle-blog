@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
                 <Grid container>
                   <Grid item xs={6} sm={6} md={10} lg={10}>
                     <Box sx={{ display: { xs: "block", lg: "block", md: "block" }, ml: 0, mt: { xs: 1 } }}>
-                      <Typography variant="subtitle2" color="#FFCA3E">
+                      <Typography variant="subtitle2" color="#ffffff">
                         @Karunakar Patel. All Rights Reserved
                       </Typography>
                     </Box>
@@ -29,10 +29,10 @@ const Footer: React.FC = () => {
                   <Grid item xs={6} sm={6} md={2} lg={2}>
                     <Stack direction="row" spacing={3} sx={{ float: "right", mt: { xs: 1 } }}>
                       <Link href="/">
-                        <FacebookIcon sx={{ color: "#848AB4" }} />
+                        <FacebookIcon sx={{ color: "#ffffff" }} />
                       </Link>
-                      <Link href="/Blog">
-                        <TwitterIcon sx={{ color: "#848AB4" }} />
+                      <Link href="/cars">
+                        <TwitterIcon sx={{ color: "#ffffff" }} />
                       </Link>
                     </Stack>
                   </Grid>

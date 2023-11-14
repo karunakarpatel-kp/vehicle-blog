@@ -25,7 +25,8 @@
       "@SyntaxHighlighter/*": ["Components/SyntaxHighlighter/*"],
       "@Theme/*": ["Components/Theme/*"],
       "@UI/*": ["Components/UI/*"],
-      "@Public/*": ["public/*"]
+      "@Public/*": ["public/*"],
+      "@TataImages/*": ["pages/cars/tata/tataImages/*"]
     }
   },
   "include": [

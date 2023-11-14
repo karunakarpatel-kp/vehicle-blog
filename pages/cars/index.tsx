@@ -13,17 +13,19 @@ import ImageOnTopCard from "@UI/HomePageCards/ImageOnTopCard";
 import { themeColors } from "@Theme/Theme";
 
 import { NextPageWithLayout } from "../_app";
+import { SEO_OBJ, blogPostsObj } from "Essentials";
 
 const Blog: NextPageWithLayout = () => {
   return (
     <>
       <HeaderSection
-        title="Blog Page"
-        description="This is the Description of the Blog Page"
-        image="https://image-url"
-        url="https://blog-page-url"
-        publishedTime="2023-01-07T21:58:00+00:00"
-        lastUpdatedTime="2023-01-07T21:58:00+00:00"
+        title={SEO_OBJ.CARS_PAGE.title}
+        description={SEO_OBJ.CARS_PAGE.description!}
+        // image="https://image-url"
+        image="https://raw.githubusercontent.com/karunakarpatel-kp/Blogging-2022/main/public/nextjs_install.jpg"
+        url={SEO_OBJ.CARS_PAGE.absoluteURL}
+        publishedTime={SEO_OBJ.CARS_PAGE.publishedTime}
+        lastUpdatedTime={SEO_OBJ.CARS_PAGE.lastUpdateTime}
       />
 
       <Box textAlign="center" sx={{ mb: { xs: 0, sm: 0, md: 3, lg: 3 } }}>
@@ -33,6 +35,23 @@ const Blog: NextPageWithLayout = () => {
       </Box>
 
       <Grid container sx={{ spacing: { xs: 0, sm: 2, md: 2, lg: 2 }, pl: { xs: 1 } }}>
+        {blogPostsObj.map((singlePostObj) => {
+          return (
+            <Grid item xs={12} sm={12} md={4} lg={4} key={singlePostObj.id}>
+              <ImageOnTopCard
+                Title={singlePostObj.title}
+                Description={singlePostObj.description!}
+                href={singlePostObj.url}
+                ImageSrc={singlePostObj.featuredImage}
+                ImageAlt={singlePostObj.featuredImageAltText}
+                tags={singlePostObj.tags}
+              />
+            </Grid>
+          );
+        })}
+      </Grid>
+
+      {/* <Grid container sx={{ spacing: { xs: 0, sm: 2, md: 2, lg: 2 }, pl: { xs: 1 } }}>
         <Grid item xs={12} sm={12} md={4} lg={4}>
           <ImageOnTopCard
             Title="Tata Safari - A New Era Of Endowed Cars"
@@ -48,35 +67,7 @@ const Blog: NextPageWithLayout = () => {
             ]}
           />
         </Grid>
-        {/* <Grid item xs={12} sm={12} md={4} lg={4}>
-          <ImageOnTopCard
-            Title="Learn SEO Right From Start To Finish Image On Right Side"
-            Description="In this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this World this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this World World.....!"
-            href="/Blog/seo"
-            ImageSrc={coding}
-            ImageAlt="Coding-Image"
-            tags={[
-              { tag: "seo", href: "/Blog/seo" },
-              { tag: "material ui", href: "/mui" },
-              { tag: "material ui", href: "/mui" },
-            ]}
-          />
-        </Grid>
-        <Grid item xs={12} sm={12} md={4} lg={4}>
-          <ImageOnTopCard
-            Title="Learn SEO Right From Start To Finish Image On Right Side"
-            Description="In this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this World this blog post you will be able o learn all the required technologies and most often you will able to see all the new era of technologies in this World World.....!"
-            href="/Blog/seo"
-            ImageSrc={coding}
-            ImageAlt="Coding-Image"
-            tags={[
-              { tag: "seo", href: "/Blog/seo" },
-              { tag: "material ui", href: "/mui" },
-              { tag: "material ui", href: "/mui" },
-            ]}
-          />
-        </Grid> */}
-      </Grid>
+      </Grid> */}
 
       {/* Old Content Styling Below */}
       {/* <Grid container sx={{ spacing: { xs: 0, sm: 2, md: 2, lg: 2 }, pl: { xs: 1 } }}>

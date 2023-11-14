@@ -4,7 +4,7 @@ import React from "react";
 
 interface HeaderImageFullBlogPostProps {
   alt: string;
-  image: StaticImageData;
+  image: StaticImageData | string;
 }
 
 const HeaderImageFullBlogPost = (props: HeaderImageFullBlogPostProps) => {
@@ -23,7 +23,15 @@ const HeaderImageFullBlogPost = (props: HeaderImageFullBlogPostProps) => {
           display: { xs: "none", sm: "none", md: "block", lg: "block" },
         }}
       >
-        <Image alt={alt} src={image} fill />
+        <Image
+          alt={alt}
+          src={image}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width : 1200px) 50vw, 33vw"
+          priority={false}
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP88h8AAu0B9XNPCQQAAAAASUVORK5CYII="
+        />
       </Box>
     </>
   );
