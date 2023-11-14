@@ -91,7 +91,7 @@ const TataSafari: NextPageWithLayout = () => {
   };
 
   const pageUrl = useRouter();
-  const url = "https://www.karunakarpatel.com";
+  const url = "https://www.vehiclemasti.com/";
   const completeURL = url + pageUrl.asPath;
 
   return (
