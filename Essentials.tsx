@@ -2,6 +2,29 @@ import tataImage from "@TataImages/tata-design.jpg";
 import TataPersona from "@TataImages/iconic-roof-rails-with-chrome-inserts-27-23.jpg";
 import TataWelcomeImage from "@TataImages/safari-overview-d-banner-27-23.jpg";
 
+export const DateMonthYearForBlogPost = (lastUpdateTime: string) => {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const date = new Date(lastUpdateTime);
+  const day = date.getDate();
+  const month = months[date.getMonth()]; // Months are 0-based in JavaScript Dates
+  const year = date.getFullYear();
+  // console.log(`${day}/${month}/${year}`, "DATE");
+  return `${day}, ${month}, ${year}`;
+};
+
 export const dynamicLastUpdatedTime = () => {
   const currentDate = new Date();
   const year = currentDate.getFullYear();
@@ -92,10 +115,10 @@ export const SEO_OBJ = {
       TATA_SAFARI: {
         absoluteURL: blogPostURLS.TATA_COMPANY_OBJ.TATA_BLOG_PAGES.TATA_SAFARI_ABSOLUTE_URL,
         relativeURL: blogPostURLS.TATA_COMPANY_OBJ.TATA_BLOG_PAGES.TATA_SAFARI_RELATIVE_URL,
-        title: "Tata Safari Facelift 2023: An ultimate guide to Tata Safari car.",
+        title: "Tata Safari Facelift 2023: A closer look into modern SUV.",
         description:
-          "Here is the ultimate guide to the Tata Safari car, where everything you need to know about this car. Here, I will highlight about Tata Safari 2023 facelift car, prices, reviews, exterior, interior, mileage, color, images, facelift, on-road prices, power, comfort, and many more about the Tata Safari car. Read on to find it more.",
-        publishedTime: "2023-10-20T19:07:55+00:00",
+          "Here is the ultimate guide to the Tata Safari SUV, where everything you need to know about this car. Here, I will highlight the Tata Safari 2023 facelift car, prices, reviews, exterior, interior, mileage, color, images, facelift, on-road prices, power, comfort, and many more about the Tata Safari car. Read on to find out more.",
+        publishedTime: "2023-11-14T09:07:55+00:00",
         lastUpdateTime: `${dynamicLastUpdatedTime()}`,
         tags: [
           { tag: "Cars", href: `${blogPostURLS.CARS_PAGE_RELATIVE}` },

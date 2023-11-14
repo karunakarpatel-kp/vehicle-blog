@@ -26,7 +26,7 @@ const BrandingSection: React.FC = () => {
             Welcome to Vehicle masti
           </Typography>
           <Typography variant="brandingSectionIntro" mt={3} color="#CFCDE2" pr={4} pl={4}>
-            A place for car enthusias
+            A hub for car enthusiasts
           </Typography>
           {/* <Typography variant="body2" color="#CFCDE2" mt={3} sx={{ mb: { xs: 3 } }}>
             Find more about my{" "}

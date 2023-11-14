@@ -108,3 +108,24 @@ const BasicTable = (props: BasicTableProps) => {
 };
 
 export default BasicTable;
+
+{
+  /* <BasicTable
+            tableHeads={[
+              { id: 0, align: "left", title: "First Header" },
+              { id: 1, align: "center", title: "Second Header" },
+              { id: 2, align: "center", title: "On-Road Price" },
+              { id: 3, align: "center", title: "Mileage" },
+              { id: 4, align: "center", title: "Fifth Header" },
+            ]}
+            tableData={[
+              { id: 0, align: "center", Data: ["Frozen yoghurt", 159, 6.0, 24, 4.0] },
+              { id: 1, align: "center", Data: ["Frozen yoghurt", 159, "karunakar Patel", "NA", 4.0] },
+              {
+                id: 2,
+                align: "center",
+                Data: ["Frozen yoghurt", 159, "karunakar Patel", "NA", "this is an e had ble body...!"],
+              },
+            ]}
+          /> */
+}

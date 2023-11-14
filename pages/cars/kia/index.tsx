@@ -43,7 +43,7 @@ const KiaHomePage: NextPageWithLayout = () => {
       {/* Added Load More Button */}
       <Box textAlign="center" mt={6} mb={6}>
         <Link
-          href="/Blog"
+          href="/cars"
           style={{
             display: "flex",
             justifyContent: "center",

@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                       <Link href="/">
                         <FacebookIcon sx={{ color: "#ffffff" }} />
                       </Link>
-                      <Link href="/Blog">
+                      <Link href="/cars">
                         <TwitterIcon sx={{ color: "#ffffff" }} />
                       </Link>
                     </Stack>

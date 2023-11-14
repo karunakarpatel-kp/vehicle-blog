@@ -45,7 +45,7 @@ interface BasicTabsProps {
   }[];
   customTabPanelData: {
     index: number;
-    text: string;
+    text: string | React.ReactNode;
   }[];
 }
 
@@ -97,7 +97,7 @@ const BasicTabs = (props: BasicTabsProps) => {
             );
           })}
         </Tabs>
-        {customTabPanelData.map((singleCustomTabPanel: { index: number; text: string }) => {
+        {customTabPanelData.map((singleCustomTabPanel: { index: number; text: string | React.ReactNode }) => {
           const { index, text } = singleCustomTabPanel;
           return (
             <CustomTabPanel value={value} index={index} key={index}>
@@ -113,21 +113,25 @@ const BasicTabs = (props: BasicTabsProps) => {
 export default BasicTabs;
 
 {
-  /* <Tab
-            label="Two"
-            {...a11yProps(0)}
-            disableRipple
-            disableFocusRipple
-            disableTouchRipple
-            sx={{
-              color: "white",
-              "&.Mui-selected": { color: "white", p: 0 },
-              // "&.MuiTabs-indicator": { backgroundColor: "white" },
-            }}
+  /* <ScrollableTabs
+            tabsData={[
+              { id: 0, label: "One" },
+              { id: 1, label: "Two" },
+              { id: 2, label: "Three" },
+            ]}
+            customTabPanelData={[
+              {
+                index: 0,
+                text: "One text for one...!",
+              },
+              {
+                index: 1,
+                text: "Two text for one...!",
+              },
+              {
+                index: 2,
+                text: `One Table Data Should Support and Display In here`,
+              },
+            ]}
           /> */
-}
-{
-  /* <CustomTabPanel value={value} index={1}>
-              Second Paragraph is here
-            </CustomTabPanel> */
 }
