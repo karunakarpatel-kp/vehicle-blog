@@ -5,14 +5,14 @@ import React from "react";
 import grillImage from "@TataImages/cocooned-safety-safari-2023.jpg";
 import Typography from "@mui/material/Typography/Typography";
 
-interface BlogPostRightImageProps {
+interface BlogPostImageCardProps {
   paragraphText: string;
   imageSrc: string | StaticImageData;
   imageAltText: string;
   imageAlignment: string;
 }
 
-const BlogPostRightImage = (props: BlogPostRightImageProps) => {
+const BlogPostImageCard = (props: BlogPostImageCardProps) => {
   const { paragraphText, imageSrc, imageAltText, imageAlignment } = props;
   return (
     <>
@@ -68,4 +68,4 @@ const BlogPostRightImage = (props: BlogPostRightImageProps) => {
   );
 };
 
-export default BlogPostRightImage;
+export default BlogPostImageCard;
