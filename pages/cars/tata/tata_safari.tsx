@@ -739,7 +739,7 @@ const TataSafari: NextPageWithLayout = () => {
 
           <HeadingThree id="front-armrest" title="Front armrest with cooled storage:" />
           <BlogPostImageCard
-            paragraphText=""
+            paragraphText="The new safari has the latest design with a front armrest with cooled storage right in front."
             imageSrc={frontArmrestImage}
             imageAltText="tata-safari-front-armrest"
             imageAlignment="left"
