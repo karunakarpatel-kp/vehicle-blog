@@ -1,15 +1,16 @@
 import { ThemeProvider } from "@emotion/react";
-import { useRouter } from "next/router";
+import { Router, useRouter } from "next/router";
 import { ReactElement, ReactNode, useEffect } from "react";
 
 import { AppProps } from "next/app";
+import { NextComponentType, NextPage } from "next";
+import nProgress from "nprogress";
 
 import "../styles/globals.css";
 import "../public/fonts/font.css";
-import { NextComponentType, NextPage } from "next";
+import "../styles/nProgress.css";
 
 // Layout of the Nextjs Page with TypeScript...!
-
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
@@ -17,6 +18,10 @@ export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
+
+Router.events.on("routeChangeStart", nProgress.start);
+Router.events.on("routeChangeError", nProgress.done);
+Router.events.on("routeChangeComplete", nProgress.done);
 
 const _app = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout || ((page) => page);
