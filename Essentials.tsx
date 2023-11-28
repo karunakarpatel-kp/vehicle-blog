@@ -2,6 +2,7 @@ import tataImage from "@TataImages/tata-design.jpg";
 import TataPersona from "@TataImages/iconic-roof-rails-with-chrome-inserts-27-23.jpg";
 import TataWelcomeImage from "@TataImages/safari-overview-d-banner-27-23.jpg";
 import vehicleMasti from "@Public/welcome-vehiclemasti.png";
+import { StaticImageData } from "next/image";
 
 export const DateMonthYearForBlogPost = (lastUpdateTime: string) => {
   const months = [
@@ -38,14 +39,49 @@ export const dynamicLastUpdatedTime = () => {
   return formattedDate;
 };
 
-export const BASE_URLS = {
+interface Base_Url_Props {
+  HOME_PAGE_BASE_URL: string;
+  CARS_PAGE_BASE_URL: string;
+  TATA_PAGE_BASE_URL: string;
+  KIA_PAGE_BASE_URL: string;
+}
+
+export const BASE_URLS: Base_Url_Props = {
   HOME_PAGE_BASE_URL: "https://www.vehiclemasti.com",
   CARS_PAGE_BASE_URL: "https://www.vehiclemasti.com/cars",
   TATA_PAGE_BASE_URL: "https://www.vehiclemasti.com/cars/tata",
   KIA_PAGE_BASE_URL: "https://www.vehiclemasti.com/cars/kia",
 };
 
-export const blogPostURLS = {
+interface TATA_COMPANY_OBJ {
+  TATA_PAGE_ABSOLUTE: string;
+  TATA_PAGE_RELATIVE: string;
+  TATA_BLOG_PAGES: {
+    TATA_SAFARI_ABSOLUTE_URL: string;
+    TATA_SAFARI_RELATIVE_URL: string;
+  };
+}
+interface KIA_COMPANY_OBJ {
+  KIA_PAGE_ABSOLUTE: string;
+  KIA_PAGE_RELATIVE: string;
+  KIA_BLOG_PAGES: {
+    KIA_SELTOS_ABSOLUTE_URL: string;
+    KIA_SELTOS_RELATIVE_URL: string;
+    KIA_SELTOS2_ABSOLUTE_URL: string;
+    KIA_SELTOS2_RELATIVE_URL: string;
+  };
+}
+interface Blog_Post_URL_Props {
+  HOME_PAGE_ABSOLUTE: string;
+  HOME_PAGE_RELATIVE: string;
+
+  CARS_PAGE_ABSOLUTE: string;
+  CARS_PAGE_RELATIVE: string;
+  TATA_COMPANY_OBJ: TATA_COMPANY_OBJ;
+  KIA_COMPANY_OBJ: KIA_COMPANY_OBJ;
+}
+
+export const blogPostURLS: Blog_Post_URL_Props = {
   HOME_PAGE_ABSOLUTE: BASE_URLS.HOME_PAGE_BASE_URL,
   HOME_PAGE_RELATIVE: "/",
 
