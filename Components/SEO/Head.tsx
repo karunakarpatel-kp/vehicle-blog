@@ -1,10 +1,11 @@
 import React from "react";
 import Head from "next/head";
+import { StaticImageData } from "next/image";
 
 interface HeaderSectionProps {
   title: string;
   description: string;
-  image: string;
+  image?: any;
   url: string;
   publishedTime: string;
   lastUpdatedTime: string;

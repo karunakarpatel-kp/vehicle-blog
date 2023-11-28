@@ -4,12 +4,10 @@ interface highlightTextProps {
   children?: JSX.Element | JSX.Element[] | string | string[];
 }
 
-const HighlightText = (props: highlightTextProps) => {
+export const HighlightText = (props: highlightTextProps) => {
   return (
     <>
       <strong className="customCode">{props.children}</strong>
     </>
   );
 };
-
-export default HighlightText;

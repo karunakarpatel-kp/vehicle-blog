@@ -23,7 +23,7 @@ const Home: NextPageWithLayout = () => {
       <HeaderSection
         title={SEO_OBJ.HOME_PAGE.title}
         description={SEO_OBJ.HOME_PAGE.description!}
-        image="https://raw.githubusercontent.com/karunakarpatel-kp/Blogging-2022/main/public/nextjs_install.png"
+        image={SEO_OBJ.HOME_PAGE.featuredImage}
         url={SEO_OBJ.HOME_PAGE.absoluteURL}
         publishedTime={SEO_OBJ.HOME_PAGE.publishedTime}
         lastUpdatedTime={SEO_OBJ.HOME_PAGE.lastUpdateTime}

@@ -36,7 +36,7 @@ import {
 import Sharing from "@Components/SocialShare/Sharing";
 import { blogPostsObj, blogPostURLS, DateMonthYearForBlogPost, SEO_OBJ } from "Essentials";
 import { NextPageWithLayout } from "pages/_app";
-import HighlightText from "@Components/SyntaxHighlighter/HighlightText";
+import { HighlightText as B } from "@Components/SyntaxHighlighter/HighlightText";
 import ScrollableTabs from "@Components/UI/Tabs/BasicTabs";
 import BasicTable from "@Components/UI/Tables/BasicTable";
 import BasicTable2 from "@Components/UI/Tables/BasicTable2";
@@ -48,6 +48,7 @@ import { TataImagesList, TataImagesListArray } from "@TataImages/TataImage";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import { CLink as Li } from "@Components/SyntaxHighlighter/CLink";
 
 interface TableOfContentsListProps {
   id: string;
@@ -92,8 +93,7 @@ const TataSafari: NextPageWithLayout = () => {
       <HeaderSection
         title={SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.title}
         description={SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.description!}
-        // image={SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.featuredImage}
-        image="https://raw.githubusercontent.com/karunakarpatel-kp/Blogging-2022/main/public/nextjs_install.png"
+        image={SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.featuredImage}
         url={SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.absoluteURL}
         publishedTime={SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.publishedTime}
         lastUpdatedTime={SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.lastUpdateTime}
@@ -119,7 +119,6 @@ const TataSafari: NextPageWithLayout = () => {
           {/* Empty Space */}
         </Grid>
       </Grid>
-
       <Divider sx={{ mt: 4, mb: 4 }} />
 
       <Grid
@@ -130,33 +129,35 @@ const TataSafari: NextPageWithLayout = () => {
       >
         <Grid item md={8} lg={8}>
           <Paragraph id="introduction">
-            Hi, in this blog post, you will learn everything about the{" "}
-            <HighlightText>new safari facelift 2023</HighlightText> from the overview, reviews, variants, mileage,
-            on-road price, etc. This is the best place to get a complete overview or information about Tata Safari Car
-            2023.
+            Hi, in this blog post, you will learn everything about the <B>new safari facelift 2023</B> from the
+            <B>overview</B>, <B>reviews</B>, <B>variants</B>, <B>mileage</B>, <B>on-road price</B>, etc. This is the
+            best place to get a complete overview or information about{" "}
+            <Li href="https://cars.tatamotors.com/suv/safari" text="Tata Safari facelift car 2023" />.
           </Paragraph>
           <Paragraph>
-            Tata Automobiles launched a brand-new SUV named Tata Safari Facelift 2023 car earlier this year in October.
-            Tata Safari is one of the most iconic SUVs in India as it has been manufacturing branded cars for over two
-            decades in India. The safari had evolved from off-road cars to sophisticated or feature-rich family cars. If
-            you are looking for a hot, modern, safest, best build quality, feature-hit branded SUV, then Tata Safari is
-            the best choice.
+            <B>Tata Automobiles</B> launched a brand-new <B>SUV</B> named{" "}
+            <Li href="https://cars.tatamotors.com/suv/safari" text="Tata Safari Facelift 2023" /> car earlier this year
+            in October. Tata Safari is one of the most iconic SUVs in India as it has been manufacturing branded cars
+            for over two decades in India. The safari had evolved from off-road cars to sophisticated or feature-rich
+            family cars. If you are looking for a hot, modern, safest, best build quality, feature-hit branded SUV, then
+            Tata Safari is the best choice.
           </Paragraph>
 
           <HeadingTwo id="tata-safari-key-features" title="Tata Safari Key Features:" />
           <Paragraph>
-            However, the Tata Safari facelift comes with a hot stylish design, a feature-rich infotainment system,
-            advanced safety features, a spacious cabin, and a powerful diesel engine. It is the best choice for those
-            who want a family car that can also handle adventure.
+            However, the <B>Tata Safari facelift</B> comes with a hot stylish design, a feature-rich infotainment
+            system, advanced safety features, a spacious cabin, and a powerful diesel engine. It is the best choice for
+            those who want a family car that can also handle adventure.
           </Paragraph>
           <Paragraph>
-            Ok wait, let’s check into some detailed key features and highlights of Tata Safari facelift 2023.
+            Ok wait, let’s check into some detailed key features and highlights of{" "}
+            <Li text="Tata Safari facelift 2023" href="https://cars.tatamotors.com/suv/safari" />.
           </Paragraph>
 
           <HeadingThree id="the-grand-design" title="The Grand Design:" />
           <Paragraph>
-            Tata Safari facelift comes with new noticeable cosmetic changes that will give a more contemporary look to
-            this branded new SUV. Below is a list of key design updates.
+            <B>Tata Safari facelift</B> comes with new noticeable cosmetic changes that will give a more contemporary
+            look to this branded new SUV. Below is a list of key design updates.
           </Paragraph>
 
           <HeadingThree id="new-parametric-grill" title="New Parametric Grill:" />
@@ -700,7 +701,7 @@ const TataSafari: NextPageWithLayout = () => {
             imageAlignment="right"
           />
 
-          <HeadingThree title="Tata Image Gallery" id="tata-image-gallery" />
+          {/* <HeadingThree title="Tata Image Gallery" id="tata-image-gallery" /> */}
 
           {/* <Carousel showThumbs={true} showStatus={true} autoPlay={true}>
             {TataImagesListArray.map((singleImageList: any) => {
