@@ -1,6 +1,7 @@
 import tataImage from "@TataImages/tata-design.jpg";
 import TataPersona from "@TataImages/iconic-roof-rails-with-chrome-inserts-27-23.jpg";
 import TataWelcomeImage from "@TataImages/safari-overview-d-banner-27-23.jpg";
+import vehicleMasti from "@Public/welcome-vehiclemasti.png";
 
 export const DateMonthYearForBlogPost = (lastUpdateTime: string) => {
   const months = [
@@ -83,7 +84,7 @@ export const SEO_OBJ = {
       "Welcome to VehicleMasti Blog! This is the perfect place for people who love automobiles whether you are a car enthusiast or a casual driver. You'll find easy-to-understand articles, maintenance tips, and reviews about different automobile manufacturers. Our engaging content provides to all levels of automotive interest. Stay updated and dive into the exciting world of Innovative automobiles with us! Join our community and let's learn and grow together in the world of automobiles!",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2023-10-20T19:07:55+00:00",
-    featuredImage: { tataImage },
+    featuredImage: vehicleMasti,
     featuredImageAltText: "a-person-with-computer",
   },
 
@@ -96,7 +97,7 @@ export const SEO_OBJ = {
       "Welcome to VehicleMasti, a car informational page where I share my passion for cars and everything related to them. Here, I will write about different types of cars, their features, advantages, reviews, latest news, prices, comparisons, disadvantages, tips, tricks, and many more. Stay updated with the latest news about cars and let us learn and grow together in the world of innovative cars.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2023-10-20T19:07:55+00:00",
-    featuredImage: tataImage,
+    featuredImage: vehicleMasti,
     featuredImageAltText: "a-person-with-computer",
   },
 
@@ -109,7 +110,7 @@ export const SEO_OBJ = {
       "Welcome to VehicleMasti, a Tata Motors car informational page where I share my passion for Tata cars and everything related to them. Here, I will write about different variants of Tata cars, their features, advantages, reviews, latest news, prices, comparisons, disadvantages, tips, tricks, and many more. Stay updated with the latest news about different variants of Tata cars and let us learn and grow together in the world of innovative Tata cars.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2023-10-20T19:07:55+00:00",
-    featuredImage: tataImage,
+    featuredImage: vehicleMasti,
     featuredImageAltText: "a-person-with-computer",
     TATA_PAGES_OBJ: {
       TATA_SAFARI: {

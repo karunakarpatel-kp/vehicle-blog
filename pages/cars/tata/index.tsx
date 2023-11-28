@@ -21,7 +21,7 @@ const TataHomePage: NextPageWithLayout = () => {
       <HeaderSection
         title={SEO_OBJ.TATA_HOMEPAGE.title}
         description={SEO_OBJ.TATA_HOMEPAGE.description!}
-        image="https://raw.githubusercontent.com/karunakarpatel-kp/Blogging-2022/main/public/nextjs_install.jpg"
+        image={SEO_OBJ.TATA_HOMEPAGE.featuredImage}
         url={SEO_OBJ.TATA_HOMEPAGE.absoluteURL}
         publishedTime={SEO_OBJ.TATA_HOMEPAGE.publishedTime}
         lastUpdatedTime={SEO_OBJ.TATA_HOMEPAGE.lastUpdateTime}

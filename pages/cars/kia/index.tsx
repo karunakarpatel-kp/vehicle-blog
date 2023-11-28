@@ -21,8 +21,8 @@ const KiaHomePage: NextPageWithLayout = () => {
       <HeaderSection
         title={SEO_OBJ.CARS_PAGE.title}
         description={SEO_OBJ.CARS_PAGE.description!}
+        image={SEO_OBJ.CARS_PAGE.featuredImage}
         // image="https://image-url"
-        image="https://raw.githubusercontent.com/karunakarpatel-kp/Blogging-2022/main/public/nextjs_install.jpg"
         url={SEO_OBJ.CARS_PAGE.absoluteURL}
         publishedTime={SEO_OBJ.CARS_PAGE.publishedTime}
         lastUpdatedTime={SEO_OBJ.CARS_PAGE.lastUpdateTime}
