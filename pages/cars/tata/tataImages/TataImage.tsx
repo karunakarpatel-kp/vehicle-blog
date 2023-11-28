@@ -134,3 +134,8 @@ export const TataImagesListArray = [
   roofRails,
   interiorTheme,
 ];
+
+const DummyFunction = () => {
+  return <></>;
+};
+export default DummyFunction;
