@@ -8,6 +8,7 @@ import Theme from "@Theme/Theme";
 import Navigation from "@UI/Navigation";
 import Sharing from "@Components/SocialShare/Sharing";
 import { useRouter } from "next/router";
+import RecentPosts from "@Components/UI/RecentPosts";
 
 interface FullpageBlogPostLayoutProps {
   children?: React.ReactNode;
@@ -49,6 +50,9 @@ const FullPageBlogPostLayout = (props: FullpageBlogPostLayoutProps) => {
         <Grid item xs={12} sm={11} md={10} lg={9} minHeight="100vh" border={0}>
           {/* Center Content */}
           {props.children}
+
+          {/* Recent Posts */}
+          {/* <RecentPosts /> */}
 
           {/* Sharing Icon Container In Below */}
           <Grid

@@ -23,10 +23,10 @@ const BrandingSection: React.FC = () => {
         </Box>
         <Box textAlign="center">
           <Typography variant="h1" color="white">
-            Welcome to Vehicle masti
+            Welcome to VehicleMasti
           </Typography>
           <Typography variant="brandingSectionIntro" mt={3} color="#CFCDE2" pr={4} pl={4}>
-            A hub for car enthusiasts
+            A hub for Automobile enthusiasts
           </Typography>
           {/* <Typography variant="body2" color="#CFCDE2" mt={3} sx={{ mb: { xs: 3 } }}>
             Find more about my{" "}
