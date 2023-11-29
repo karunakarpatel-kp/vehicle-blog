@@ -110,7 +110,54 @@ export const blogPostURLS: Blog_Post_URL_Props = {
   },
 };
 
-export const SEO_OBJ = {
+interface Tag {
+  tag: string;
+  href: string;
+}
+
+interface BlogPage {
+  absoluteURL: string;
+  relativeURL: string;
+  title: string;
+  description: string;
+  lastUpdateTime: string;
+  publishedTime: string;
+  featuredImage: any;
+  featuredImageAltText: string;
+}
+
+interface HomePage extends BlogPage {}
+
+interface CarsPage extends BlogPage {}
+
+interface TataSafariPage extends BlogPage {
+  tags: Tag[];
+}
+
+interface TataHomePage extends BlogPage {
+  TATA_PAGES_OBJ: {
+    TATA_SAFARI: TataSafariPage;
+  };
+}
+
+interface KiaSeltosPage extends BlogPage {
+  tags: Tag[];
+}
+
+interface KiaHomePage extends BlogPage {
+  KIA_PAGES_OBJ: {
+    KIA_SELTOS: KiaSeltosPage;
+  };
+}
+
+interface SEOObjProps {
+  HOME_PAGE: HomePage;
+  CARS_PAGE: CarsPage;
+  TATA_HOMEPAGE: TataHomePage;
+  // KIA_HOMEPAGE: KiaHomePage;
+}
+
+export const SEO_OBJ: SEOObjProps = {
   // HomePage
   HOME_PAGE: {
     absoluteURL: blogPostURLS.HOME_PAGE_ABSOLUTE,
@@ -168,7 +215,6 @@ export const SEO_OBJ = {
     },
   },
 
-  //   Kia Automobiles with URL /cars/kia
   // KIA_HOMEPAGE: {
   //   absoluteURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_ABSOLUTE,
   //   relativeURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_RELATIVE,
@@ -212,3 +258,33 @@ export const blogPostsObj = [
     featuredImageAltText: `${SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.featuredImageAltText}`,
   },
 ];
+
+//   Kia Automobiles with URL /cars/kia
+// KIA_HOMEPAGE: {
+//   absoluteURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_ABSOLUTE,
+//   relativeURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_RELATIVE,
+//   title: "Kia Automobiles: A hub for Kia Cars enthusiast | VehicleMasti",
+//   description:
+//     "Welcome to VehicleMasti, a Kia Motors car informational page where I share my passion for Kia cars and everything related to them. Here, I will write about different variants of Kia cars, their features, advantages, reviews, latest news, prices, comparisons, disadvantages, tips, tricks, and many more. Stay updated with the latest news about different variants of Kia cars and let us learn and grow together in the world of innovative Kia cars.",
+//   lastUpdateTime: `${dynamicLastUpdatedTime()}`,
+//   publishedTime: "2023-10-20T19:07:55+00:00",
+//   featuredImage: tataImage,
+//   featuredImageAltText: "a-person-with-computer",
+//   KIA_PAGES_OBJ: {
+//     KIA_SELTOS: {
+//       absoluteURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_ABSOLUTE_URL,
+//       relativeURL: blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_RELATIVE_URL,
+//       title: "Kia Seltos URL in here",
+//       description: "Kia Seltos Description in here...",
+//       publishedTime: "2023-10-20T19:07:55+00:00",
+//       lastUpdateTime: `${dynamicLastUpdatedTime()}`,
+//       tags: [
+//         { tag: "Cars", href: `${blogPostURLS.CARS_PAGE_RELATIVE}` },
+//         { tag: "Kia", href: `${blogPostURLS.KIA_COMPANY_OBJ.KIA_PAGE_RELATIVE}` },
+//         { tag: "Kia Seltos", href: `${blogPostURLS.KIA_COMPANY_OBJ.KIA_BLOG_PAGES.KIA_SELTOS_RELATIVE_URL}` },
+//       ],
+//       featuredImageAltText: "a-person-with-computer",
+//       featuredImage: tataImage,
+//     },
+//   },
+// },
