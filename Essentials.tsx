@@ -75,6 +75,15 @@ interface Blog_Post_URL_Props {
   HOME_PAGE_ABSOLUTE: string;
   HOME_PAGE_RELATIVE: string;
 
+  PRIVACY_PAGE_ABSOLUTE: string;
+  PRIVACY_PAGE_RELATIVE: string;
+
+  CONTACT_PAGE_ABSOLUTE: string;
+  CONTACT_PAGE_RELATIVE: string;
+
+  DISCLAIMER_PAGE_ABSOLUTE: string;
+  DISCLAIMER_PAGE_RELATIVE: string;
+
   CARS_PAGE_ABSOLUTE: string;
   CARS_PAGE_RELATIVE: string;
   TATA_COMPANY_OBJ: TATA_COMPANY_OBJ;
@@ -84,6 +93,15 @@ interface Blog_Post_URL_Props {
 export const blogPostURLS: Blog_Post_URL_Props = {
   HOME_PAGE_ABSOLUTE: BASE_URLS.HOME_PAGE_BASE_URL,
   HOME_PAGE_RELATIVE: "/",
+
+  PRIVACY_PAGE_ABSOLUTE: `${BASE_URLS.HOME_PAGE_BASE_URL}/privacy`,
+  PRIVACY_PAGE_RELATIVE: "/privacy",
+
+  CONTACT_PAGE_ABSOLUTE: `${BASE_URLS.HOME_PAGE_BASE_URL}/contact`,
+  CONTACT_PAGE_RELATIVE: "/contact",
+
+  DISCLAIMER_PAGE_ABSOLUTE: `${BASE_URLS.HOME_PAGE_BASE_URL}/disclaimer`,
+  DISCLAIMER_PAGE_RELATIVE: "/disclaimer",
 
   CARS_PAGE_ABSOLUTE: BASE_URLS.CARS_PAGE_BASE_URL,
   CARS_PAGE_RELATIVE: "/cars",
@@ -127,7 +145,9 @@ interface BlogPage {
 }
 
 interface HomePage extends BlogPage {}
-
+interface PolicyPage extends BlogPage {}
+interface ContactPage extends BlogPage {}
+interface DisclaimerPage extends BlogPage {}
 interface CarsPage extends BlogPage {}
 
 interface TataSafariPage extends BlogPage {
@@ -152,6 +172,9 @@ interface KiaHomePage extends BlogPage {
 
 interface SEOObjProps {
   HOME_PAGE: HomePage;
+  POLICY_PAGE: PolicyPage;
+  CONTACT_PAGE: ContactPage;
+  DISCLAIMER_PAGE: DisclaimerPage;
   CARS_PAGE: CarsPage;
   TATA_HOMEPAGE: TataHomePage;
   // KIA_HOMEPAGE: KiaHomePage;
@@ -162,11 +185,47 @@ export const SEO_OBJ: SEOObjProps = {
   HOME_PAGE: {
     absoluteURL: blogPostURLS.HOME_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.HOME_PAGE_RELATIVE,
-    title: "Vehicle Masti: A hub for Automobile enthusiasts.",
+    title: "VehicleMasti: A hub for Automobile enthusiasts.",
     description:
       "Welcome to VehicleMasti Blog! This is the perfect place for people who love automobiles whether you are a car enthusiast or a casual driver. You'll find easy-to-understand articles, maintenance tips, and reviews about different automobile manufacturers. Our engaging content provides to all levels of automotive interest. Stay updated and dive into the exciting world of Innovative automobiles with us! Join our community and let's learn and grow together in the world of automobiles!",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2023-10-20T19:07:55+00:00",
+    featuredImage: vehicleMasti,
+    featuredImageAltText: "a-person-with-computer",
+  },
+
+  POLICY_PAGE: {
+    absoluteURL: blogPostURLS.PRIVACY_PAGE_ABSOLUTE,
+    relativeURL: blogPostURLS.PRIVACY_PAGE_RELATIVE,
+    title: "Privacy Policy | VehicleMasti",
+    description:
+      "Welcome to VehicleMasti privacy policy. In here you can find all the details about privacy policy of VehcileMasti",
+    lastUpdateTime: `${dynamicLastUpdatedTime()}`,
+    publishedTime: "2023-12-09T19:07:55+00:00",
+    featuredImage: vehicleMasti,
+    featuredImageAltText: "a-person-with-computer",
+  },
+
+  CONTACT_PAGE: {
+    absoluteURL: blogPostURLS.CONTACT_PAGE_ABSOLUTE,
+    relativeURL: blogPostURLS.CONTACT_PAGE_RELATIVE,
+    title: "Contact Us | VehicleMasti",
+    description:
+      "Welcome to VehicleMasti contact page. In here you can find all the details of about VehicleMasti contact information and a way to contact administrator of the VehicleMasti site.",
+    lastUpdateTime: `${dynamicLastUpdatedTime()}`,
+    publishedTime: "2023-12-09T19:07:55+00:00",
+    featuredImage: vehicleMasti,
+    featuredImageAltText: "a-person-with-computer",
+  },
+
+  DISCLAIMER_PAGE: {
+    absoluteURL: blogPostURLS.DISCLAIMER_PAGE_ABSOLUTE,
+    relativeURL: blogPostURLS.DISCLAIMER_PAGE_RELATIVE,
+    title: "Disclaimer | VehicleMasti",
+    description:
+      "Welcome to VehicleMasti disclaimer page. In here you can find all the details of about VehicleMasti's Disclaimer and its policies.",
+    lastUpdateTime: `${dynamicLastUpdatedTime()}`,
+    publishedTime: "2023-12-09T19:07:55+00:00",
     featuredImage: vehicleMasti,
     featuredImageAltText: "a-person-with-computer",
   },

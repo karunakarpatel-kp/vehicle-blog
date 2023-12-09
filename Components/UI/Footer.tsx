@@ -19,15 +19,41 @@ const Footer: React.FC = () => {
               <Grid item xs={11} sm={11} md={10} lg={9} sx={{ pl: { xs: 1 }, pr: { xs: 2 } }}>
                 {/* Center Container */}
                 <Grid container>
-                  <Grid item xs={6} sm={6} md={10} lg={10}>
+                  <Grid item xs={12} sm={3} md={3} lg={3} border={0}>
                     <Box sx={{ display: { xs: "block", lg: "block", md: "block" }, ml: 0, mt: { xs: 1 } }}>
                       <Typography variant="subtitle2" color="#ffffff">
                         @Karunakar Patel. All Rights Reserved
                       </Typography>
                     </Box>
                   </Grid>
-                  <Grid item xs={6} sm={6} md={2} lg={2}>
-                    <Stack direction="row" spacing={3} sx={{ float: "right", mt: { xs: 1 } }}>
+
+                  <Grid item xs={12} sm={6} md={6} lg={6} border={0} mt={{ xs: 1, sm: 1, md: 0, lg: 0 }}>
+                    <Stack
+                      direction="row"
+                      spacing={3}
+                      sx={{ float: { xs: "none", sm: "none", md: "right", lg: "right" }, mt: { xs: 1 } }}
+                    >
+                      <Link href="/" style={{ color: "white", textDecorationColor: "white" }}>
+                        Home
+                      </Link>
+                      <Link href="/contact" style={{ color: "white", textDecorationColor: "white" }}>
+                        Contact Us
+                      </Link>
+                      <Link href="/privacy" style={{ color: "white", textDecorationColor: "white" }}>
+                        Privacy Policy
+                      </Link>
+                      <Link href="/disclaimer" style={{ color: "white", textDecorationColor: "white" }}>
+                        Disclaimer
+                      </Link>
+                    </Stack>
+                  </Grid>
+
+                  <Grid item xs={12} sm={3} md={3} lg={3} border={0} mt={{ xs: 1, sm: 1, md: 0, lg: 0 }}>
+                    <Stack
+                      direction="row"
+                      spacing={3}
+                      sx={{ float: { xs: "none", sm: "none", md: "right", lg: "right" }, mt: { xs: 1 } }}
+                    >
                       <Link href="/">
                         <FacebookIcon sx={{ color: "#ffffff" }} />
                       </Link>
