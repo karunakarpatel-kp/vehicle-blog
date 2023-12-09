@@ -1,6 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { useRouter } from "next/router";
-
 import { Divider, Grid, List, ListItem, ListItemText, Typography } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 
@@ -83,10 +81,6 @@ const TataSafari: NextPageWithLayout = () => {
       behavior: "smooth",
     });
   };
-
-  const pageUrl = useRouter();
-  const url = "https://www.vehiclemasti.com/";
-  const completeURL = url + pageUrl.asPath;
 
   return (
     <>
@@ -820,7 +814,10 @@ const TataSafari: NextPageWithLayout = () => {
 
               {/* Social Sharing Icons Are below */}
               <Box>
-                <Sharing url={completeURL} title={SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.title} />
+                <Sharing
+                  url={SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.absoluteURL}
+                  title={SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.title}
+                />
               </Box>
             </Box>
           </Box>
