@@ -32,9 +32,10 @@ const BlogPostImageCard = (props: BlogPostImageCardProps) => {
         }
       >
         {imageAlignment === "left" && (
-          <Grid item xs={12} sm={12} md={12} lg={6}>
-            <Box position="relative" sx={{ width: "100%", height: "auto" }}>
-              <Image src={imageSrc} alt={imageAltText} width={390} height={240} />
+          <Grid item xs={12} sm={12} md={12} lg={6} sx={{ width: "100%", height: "auto" }}>
+            <Box position="relative" sx={{ width: "100%", height: "100%" }}>
+              {/* <Image src={imageSrc} alt={imageAltText} width={390} height={240} /> */}
+              <Image src={imageSrc} alt={imageAltText} style={{ width: "100%", height: "100%" }} />
             </Box>
           </Grid>
         )}
@@ -57,9 +58,18 @@ const BlogPostImageCard = (props: BlogPostImageCardProps) => {
           </Typography>
         </Grid>
         {imageAlignment === "right" && (
-          <Grid item xs={12} sm={12} md={12} lg={6} mt={{ xs: 0, sm: 0, md: 0, lg: 0 }}>
-            <Box position="relative" sx={{ width: "100%", height: "auto" }}>
-              <Image src={imageSrc} alt={imageAltText} width={390} height={240} />
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={12}
+            lg={6}
+            mt={{ xs: 0, sm: 0, md: 0, lg: 0 }}
+            sx={{ width: "100%", height: "auto" }}
+          >
+            <Box position="relative" sx={{ width: "100%", height: "100%" }}>
+              {/* <Image src={imageSrc} alt={imageAltText} width={390} height={240} /> */}
+              <Image src={imageSrc} alt={imageAltText} style={{ width: "100%", height: "100%" }} />
             </Box>
           </Grid>
         )}
