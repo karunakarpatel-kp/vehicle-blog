@@ -187,7 +187,7 @@ export const SEO_OBJ: SEOObjProps = {
     relativeURL: blogPostURLS.HOME_PAGE_RELATIVE,
     title: "VehicleMasti: A hub for Automobile enthusiasts.",
     description:
-      "Welcome to VehicleMasti Blog! This is the perfect place for people who love automobiles whether you are a car enthusiast or a casual driver. You'll find easy-to-understand articles, maintenance tips, and reviews about different automobile manufacturers. Our engaging content provides to all levels of automotive interest. Stay updated and dive into the exciting world of Innovative automobiles with us! Join our community and let's learn and grow together in the world of automobiles!",
+      "Welcome to VehicleMasti Blog! This is the perfect place for people who love automobiles whether you are a car enthusiast or a casual driver. You'll find easy-to-understand articles, maintenance tips, and reviews about different automobile manufacturers. Join our community and let's learn and grow together in the world of automobiles!",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2023-10-20T19:07:55+00:00",
     featuredImage: vehicleMasti,
@@ -249,7 +249,7 @@ export const SEO_OBJ: SEOObjProps = {
     relativeURL: blogPostURLS.TATA_COMPANY_OBJ.TATA_PAGE_RELATIVE,
     title: "Tata Automobiles: A Hub for Tata Cars Enthusiasts | VehicleMasti",
     description:
-      "Welcome to VehicleMasti, a Tata Motors car informational page where I share my passion for Tata cars and everything related to them. Here, I will write about different variants of Tata cars, their features, advantages, reviews, latest news, prices, comparisons, disadvantages, tips, tricks, and many more. Stay updated with the latest news about different variants of Tata cars and let us learn and grow together in the world of innovative Tata cars.",
+      "Welcome to VehicleMasti, a Tata Motors car informational page where I share my passion for Tata cars and everything related to them. Here, I will write about different variants of Tata cars, their features, advantages, reviews, latest news, prices, comparisons, disadvantages, tips, tricks, and many more. Stay updated with the latest news about different variants of Tata cars.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2023-10-20T19:07:55+00:00",
     featuredImage: vehicleMasti,

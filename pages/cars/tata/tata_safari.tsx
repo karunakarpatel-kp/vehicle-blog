@@ -814,10 +814,7 @@ const TataSafari: NextPageWithLayout = () => {
 
               {/* Social Sharing Icons Are below */}
               <Box>
-                <Sharing
-                  url={SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.absoluteURL}
-                  title={SEO_OBJ.TATA_HOMEPAGE.TATA_PAGES_OBJ.TATA_SAFARI.title}
-                />
+                <Sharing />
               </Box>
             </Box>
           </Box>

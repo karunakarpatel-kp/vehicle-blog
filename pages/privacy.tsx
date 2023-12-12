@@ -205,7 +205,7 @@ const PrivacyPage: NextPageWithLayout = () => {
           </List>
 
           <Box mb={3}>
-            <Sharing url={SEO_OBJ.POLICY_PAGE.absoluteURL} title={SEO_OBJ.POLICY_PAGE.title} />
+            <Sharing />
           </Box>
         </Grid>
 

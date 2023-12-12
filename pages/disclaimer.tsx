@@ -119,7 +119,7 @@ const DisclaimerPage: NextPageWithLayout = () => {
             </ListItem>
           </List>
           <Box mb={3}>
-            <Sharing url={SEO_OBJ.DISCLAIMER_PAGE.absoluteURL} title={SEO_OBJ.DISCLAIMER_PAGE.title} />
+            <Sharing />
           </Box>
         </Grid>
 

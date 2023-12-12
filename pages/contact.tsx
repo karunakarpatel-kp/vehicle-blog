@@ -66,7 +66,7 @@ const ContactMePage: NextPageWithLayout = () => {
             </ListItem>
           </List>
           <Box mb={3}>
-            <Sharing url={SEO_OBJ.CONTACT_PAGE.absoluteURL} title={SEO_OBJ.CONTACT_PAGE.title} />
+            <Sharing />
           </Box>
         </Grid>
 
