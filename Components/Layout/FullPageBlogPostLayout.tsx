@@ -69,7 +69,7 @@ const FullPageBlogPostLayout = (props: FullpageBlogPostLayoutProps) => {
           >
             <Grid item md={8} lg={8}>
               {/* Please remove the title and make it dynamic....! */}
-              <Sharing url={completeURL} title="hi" />
+              <Sharing />
             </Grid>
           </Grid>
           {/* End of Sharing Container */}

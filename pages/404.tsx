@@ -11,6 +11,7 @@ import HeadingThree from "@Components/Elements/Headings/HeadingThree";
 import { HighlightText as B } from "@Components/SyntaxHighlighter/HighlightText";
 import Link from "next/link";
 import HeaderSection from "@Components/SEO/Head";
+import Sharing from "@Components/SocialShare/Sharing";
 
 const Custom404: NextPageWithLayout = () => {
   return (
@@ -70,6 +71,9 @@ const Custom404: NextPageWithLayout = () => {
                 </ListItemText>
               </ListItem>
             </List>
+          </Box>
+          <Box mb={3}>
+            <Sharing />
           </Box>
         </Grid>
         <Grid
