@@ -8,7 +8,7 @@ const Document: React.FC = () => {
         <Head>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
           {/* Google Analytics Code */}
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=G-6JKN93G7ET`} />
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=G-PH29P82N32`} />
           <script
             dangerouslySetInnerHTML={{
               __html: `
