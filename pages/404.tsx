@@ -51,7 +51,7 @@ const Custom404: NextPageWithLayout = () => {
           sx={{ border: "0px solid black", display: "flex", justifyContent: "center", alignItems: "center" }}
         >
           <Box>
-            <HeadingOne id="one" title="Page Not Found" />
+            <HeadingOne id="title" title="Page Not Found" />
             <Paragraph>The page you were looking for doesnot exist.</Paragraph>
             <HeadingThree id="two" title="Here are some helpful links instead:" />
             <List sx={{ listStyle: "square", listStylePosition: "outside" }}>
@@ -71,9 +71,9 @@ const Custom404: NextPageWithLayout = () => {
                 </ListItemText>
               </ListItem>
             </List>
-          </Box>
-          <Box mb={3}>
-            <Sharing />
+            <Box mb={3} sx={{ display: { xs: "none", sm: "none", md: "block", lg: "block" } }}>
+              <Sharing />
+            </Box>
           </Box>
         </Grid>
         <Grid
