@@ -4,6 +4,12 @@ import React from "react";
 const Navigation = () => {
   return (
     <>
+      <Link href="/robots.txt" className="underline mr-5 text-cyan-700">
+        Robots
+      </Link>
+      <Link href="/sitemap.xml" className="underline mr-5 text-cyan-700">
+        Sitemap
+      </Link>
       <Link href="/" className="underline mr-5 text-cyan-700">
         Home Page
       </Link>
