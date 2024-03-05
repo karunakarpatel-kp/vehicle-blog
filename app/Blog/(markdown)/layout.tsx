@@ -5,7 +5,7 @@ const MarkDownLayout = (props: any) => {
   return (
     <>
       {/* <Navigation /> */}
-      <article className="p-7 mt-4 mb-4 m-auto prose prose-slate  lg:prose-lg prose-headings:underline prose-headings:underline-offset-8  prose-img:rounded-xl  min-h-full max-w-max sm:w-6/6 lg:w-4/6 ">
+      <article className="p-7 mt-4 mb-4 m-auto prose prose-slate lg:prose-lg   prose-img:rounded-xl  min-h-full max-w-max sm:w-6/6 lg:w-3/6 ">
         {props.children}
       </article>
     </>
