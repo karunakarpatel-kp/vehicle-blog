@@ -1,25 +1,20 @@
 import { BASE_URLS, SEO_OBJ } from "@/Essential";
 import { MetadataRoute } from "next";
 
-const sitemapURLOBJ: any = [];
-
-function pullURLAndLastUpdatedTime(incomingObj: any) {
-  Object.values(incomingObj).map((page: any) => {
-    sitemapURLOBJ.push({ url: page.absoluteURL, lastUpdatedTime: page.lastUpdateTime });
-  });
-}
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  pullURLAndLastUpdatedTime(SEO_OBJ);
-
-  const sitemapObj = sitemapURLOBJ.map((singleSitemapURLObj: any) => {
+  const postURLs = Object.values(SEO_OBJ).map((page: any) => {
     return {
-      url: singleSitemapURLObj.url,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
+      url: page.absoluteURL,
+      lastModified: page.lastUpdateTime,
+      changeFrequency: page.changeFrequency,
+      priority: 1,
     };
   });
-
-  return sitemapObj;
+  return postURLs;
+  // return [
+  //   {
+  //     url: "",
+  //     changeFrequency: "always",
+  //   },
+  // ];
 }

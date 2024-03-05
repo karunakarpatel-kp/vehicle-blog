@@ -5,8 +5,9 @@ const MarkDownLayout = (props: any) => {
   return (
     <>
       {/* <Navigation /> */}
-      <p style={{ color: "blue" }}>This is related to markdown Layout</p>
-      <article className="p-7 m-auto  prose prose-stone shadow-2xl">{props.children}</article>
+      <article className="p-7 mt-4 mb-4 m-auto prose prose-slate  lg:prose-lg prose-headings:underline prose-headings:underline-offset-8  prose-img:rounded-xl  min-h-full max-w-max sm:w-6/6 lg:w-4/6 ">
+        {props.children}
+      </article>
     </>
   );
 };

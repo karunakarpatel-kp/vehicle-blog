@@ -86,6 +86,7 @@ interface BlogPage {
   featuredImage: any;
   featuredImageAltText: string;
   ogImageURL: string;
+  changeFrequency: "weekly" | "always" | "never" | "daily" | "monthly";
 }
 interface Tag {
   tag: string;
@@ -108,6 +109,7 @@ interface SEOObjProps {
   POLICY_PAGE: PolicyPage;
   CONTACT_PAGE: ContactPage;
   DISCLAIMER_PAGE: DisclaimerPage;
+  FIRST_BLOG_POST: DisclaimerPage;
 }
 
 export const SEO_OBJ: SEOObjProps = {
@@ -123,6 +125,7 @@ export const SEO_OBJ: SEOObjProps = {
     featuredImage: textToImageWelcomeImage,
     featuredImageAltText: "ai-text-to-image-generator",
     ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/welcome-page.png`,
+    changeFrequency: "daily",
     tags: [
       { tag: "ai-text-image-generator", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
       { tag: "text-to-image-ai-tool", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
@@ -142,6 +145,7 @@ export const SEO_OBJ: SEOObjProps = {
     featuredImage: textToImageWelcomeImage,
     featuredImageAltText: "ai-text-to-image-generator",
     ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/welcome-page.png`,
+    changeFrequency: "weekly",
   },
 
   CONTACT_PAGE: {
@@ -155,6 +159,7 @@ export const SEO_OBJ: SEOObjProps = {
     featuredImage: textToImageWelcomeImage,
     featuredImageAltText: "ai-text-to-image-generator",
     ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/welcome-page.png`,
+    changeFrequency: "weekly",
   },
 
   DISCLAIMER_PAGE: {
@@ -168,23 +173,54 @@ export const SEO_OBJ: SEOObjProps = {
     featuredImage: textToImageWelcomeImage,
     featuredImageAltText: "ai-text-to-image-generator",
     ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/welcome-page.png`,
+    changeFrequency: "weekly",
+  },
+
+  FIRST_BLOG_POST: {
+    absoluteURL: "hi",
+    relativeURL: "hi",
+    title: "Disclaimer | AITextToImageGenerator",
+    description:
+      "Welcome to ai-text-to-image-generator disclaimer page. In here you can find all the details of about AITextToImageGenerator Disclaimer and its policies.",
+    lastUpdateTime: `${dynamicLastUpdatedTime()}`,
+    publishedTime: "2024-02-25T12:38:42+05:30",
+    featuredImage: textToImageWelcomeImage,
+    featuredImageAltText: "ai-text-to-image-generator",
+    ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/welcome-page.png`,
+    changeFrequency: "weekly",
   },
 };
 
 export const blogPostsObj = [
-  // {
-  //   id: 1,
-  //   url: SEO_OBJ.IMAGE_COMPRESSION_TOOL_PAGE.relativeURL,
-  //   title: SEO_OBJ.IMAGE_COMPRESSION_TOOL_PAGE.title,
-  //   description: SEO_OBJ.IMAGE_COMPRESSION_TOOL_PAGE.description,
-  //   lastUpdateTime: SEO_OBJ.IMAGE_COMPRESSION_TOOL_PAGE.lastUpdateTime,
-  //   publishedTime: SEO_OBJ.IMAGE_COMPRESSION_TOOL_PAGE.publishedTime,
-  //   tags: [
-  //     { tag: "Cars", href: "url" },
-  //     { tag: "Tata", href: "url" },
-  //     { tag: "Tata Safari", href: "url" },
-  //   ],
-  //   featuredImage: vehicleMasti,
-  //   featuredImageAltText: SEO_OBJ.IMAGE_COMPRESSION_TOOL_PAGE.featuredImageAltText,
-  // },
+  {
+    id: 1,
+    url: "/Blog/nextjs-installation",
+    title: SEO_OBJ.FIRST_BLOG_POST.title,
+    description: SEO_OBJ.FIRST_BLOG_POST.description,
+    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+    tags: [
+      { tag: "Cars", href: "url" },
+      { tag: "Tata", href: "url" },
+      { tag: "Tata Safari", href: "url" },
+    ],
+    featuredImage: textToImageWelcomeImage,
+    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  },
+
+  {
+    id: 1,
+    url: "/Blog/nextjs-installation",
+    title: SEO_OBJ.FIRST_BLOG_POST.title,
+    description: SEO_OBJ.FIRST_BLOG_POST.description,
+    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+    tags: [
+      { tag: "Cars", href: "url" },
+      { tag: "Tata", href: "url" },
+      { tag: "Tata Safari", href: "url" },
+    ],
+    featuredImage: textToImageWelcomeImage,
+    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  },
 ];
