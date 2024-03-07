@@ -1,4 +1,4 @@
-import { SEO_OBJ, blogPostURLS, blogPostsObj } from "@/Essential";
+import { SEO_OBJ, blogPostsObj } from "Essential";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";

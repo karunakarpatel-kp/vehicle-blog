@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import Navigation from "@/Components/Navigation";
 import React from "react";
 
 const MarkDownLayout = (props: any) => {

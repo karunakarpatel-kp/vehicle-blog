@@ -1,4 +1,4 @@
-import { blogPostsObj } from "@/Essential";
+import { blogPostsObj } from "Essential";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
