@@ -165,7 +165,7 @@ export const SEO_OBJ: SEOObjProps = {
   DISCLAIMER_PAGE: {
     absoluteURL: blogPostURLS.DISCLAIMER_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.DISCLAIMER_PAGE_RELATIVE,
-    title: "Disclaimer | AITextToImageGenerator",
+    title: "How to install tailwind css in Next.js application",
     description:
       "Welcome to ai-text-to-image-generator disclaimer page. In here you can find all the details of about AITextToImageGenerator Disclaimer and its policies.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
@@ -179,7 +179,7 @@ export const SEO_OBJ: SEOObjProps = {
   FIRST_BLOG_POST: {
     absoluteURL: "hi",
     relativeURL: "hi",
-    title: "Disclaimer | AITextToImageGenerator",
+    title: "A complete guide to install Tailwind css in Next.js application",
     description:
       "Welcome to ai-text-to-image-generator disclaimer page. In here you can find all the details of about AITextToImageGenerator Disclaimer and its policies.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
@@ -209,7 +209,70 @@ export const blogPostsObj = [
   },
 
   {
-    id: 1,
+    id: 2,
+    url: "/Blog/nextjs-installation",
+    title: SEO_OBJ.FIRST_BLOG_POST.title,
+    description: SEO_OBJ.FIRST_BLOG_POST.description,
+    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+    tags: [
+      { tag: "Cars", href: "url" },
+      { tag: "Tata", href: "url" },
+      { tag: "Tata Safari", href: "url" },
+    ],
+    featuredImage: textToImageWelcomeImage,
+    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  },
+  {
+    id: 3,
+    url: "/Blog/nextjs-installation",
+    title: SEO_OBJ.FIRST_BLOG_POST.title,
+    description: SEO_OBJ.FIRST_BLOG_POST.description,
+    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+    tags: [
+      { tag: "Cars", href: "url" },
+      { tag: "Tata", href: "url" },
+      { tag: "Tata Safari", href: "url" },
+    ],
+    featuredImage: textToImageWelcomeImage,
+    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  },
+
+  {
+    id: 4,
+    url: "/Blog/nextjs-installation",
+    title: SEO_OBJ.FIRST_BLOG_POST.title,
+    description: "lorem Karunakar simple Description",
+    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+    tags: [
+      { tag: "Cars", href: "url" },
+      { tag: "Tata", href: "url" },
+      { tag: "Tata Safari", href: "url" },
+    ],
+    featuredImage: textToImageWelcomeImage,
+    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  },
+
+  {
+    id: 5,
+    url: "/Blog/nextjs-installation",
+    title: SEO_OBJ.FIRST_BLOG_POST.title,
+    description: "lorem Karunakar simple Description",
+    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+    tags: [
+      { tag: "Cars", href: "url" },
+      { tag: "Tata", href: "url" },
+      { tag: "Tata Safari", href: "url" },
+    ],
+    featuredImage: textToImageWelcomeImage,
+    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  },
+
+  {
+    id: 6,
     url: "/Blog/nextjs-installation",
     title: SEO_OBJ.FIRST_BLOG_POST.title,
     description: SEO_OBJ.FIRST_BLOG_POST.description,

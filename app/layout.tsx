@@ -13,11 +13,20 @@ interface RootLayoutProps {
 
 const RootLayout = (props: RootLayoutProps) => {
   return (
-    <html lang="en">
-      <body className="bg-white prose prose-stone border-0 border-black min-h-screen max-w-full">
+    <html lang="en" className="">
+      <body className=" dark:bg-slate-700 dark:text-white prose prose-stone min-h-screen max-w-full">
         <Navigation />
         <header>{/* Header Goes Here */}</header>
-        <article>{props.children}</article>
+        <main className="border border-white grid grid-cols-12">
+          <section className="hidden md:invisible md:block md:col-span-1 border-2 border-green-800">One</section>
+
+          <section className="col-span-12 md:col-span-10 border-0 border-red-500 m-auto w-full">
+            <article>{props.children}</article>
+          </section>
+
+          <section className="hidden md:col-span-1 md:block md:invisible border border-slate-500">Two</section>
+        </main>
+
         <footer>{/* Footer Goes Here */}</footer>
       </body>
     </html>

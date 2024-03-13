@@ -10,30 +10,34 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <>
-      {blogPostsObj.map((singleBlogPost) => {
+    <div className=" grid  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-14 mt-8 mb-8">
+      {blogPostsObj.map((singleBlogPost, index) => {
         return (
-          <Link href={singleBlogPost.url} key={singleBlogPost.id} className="no-underline">
-            <div
-              key={singleBlogPost.id}
-              className="w-2/6 border shadow-2xl mt-5 mb-5 m-auto p-5 no-underline hover:bg-slate-100"
-            >
-              <h1>{singleBlogPost.title}</h1>
-              <p>{singleBlogPost.description}</p>
-              <Image src={singleBlogPost.featuredImage} alt={singleBlogPost.featuredImageAltText} />
+          <div
+            key={index}
+            className="shadow-xl mt-0 m-auto p-5 no-underline ring-1 ring-gray-200 rounded-md hover:bg-slate-100"
+          >
+            <Link href={singleBlogPost.url} className="no-underline">
+              <h1 className="text-3xl leading-snug  break-words font-bold font-sans mb-0">{singleBlogPost.title}</h1>
+              <Image
+                src={singleBlogPost.featuredImage}
+                alt={singleBlogPost.featuredImageAltText}
+                className="mt-3 mb-3"
+              />
+              <p className="text-xl mt-0 leading-normal font-normal ">{singleBlogPost.description}</p>
               <div>
-                {singleBlogPost.tags.map((singleTag) => {
+                {singleBlogPost.tags.map((singleTag, index) => {
                   return (
-                    <>
-                      <div className="underline">{singleTag.tag}</div>
-                    </>
+                    <div className="underline" key={index}>
+                      {singleTag.tag}
+                    </div>
                   );
                 })}
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
         );
       })}
-    </>
+    </div>
   );
 }
