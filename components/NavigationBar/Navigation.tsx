@@ -6,36 +6,36 @@ import Image from "next/image";
 
 const Navigation = () => {
   const [openMobileMenu, setOpenMobileMenu] = React.useState<boolean>(false);
-
   const onOpenClickHandler = () => {
     console.log(openMobileMenu, "OPEN");
     setOpenMobileMenu(true);
   };
-
   const onCloseClickHandler = () => {
     console.log(openMobileMenu, "CLOSE");
     setOpenMobileMenu(false);
   };
-
   return (
     <>
-      <div className={!openMobileMenu ? "h-24  bg-slate-700 grid grid-cols-12 items-center" : ""}>
+      <div
+        className={
+          !openMobileMenu
+            ? "h-24  bg-slate-700 dark:bg-slate-900 dark:border-b dark:border-b-slate-800 grid grid-cols-12 items-center"
+            : ""
+        }
+      >
         {/* Desktop */}
-
-        <div className="hidden md:invisible md:flex col-span-1 border border-white self-stretch justify-center items-center ">
+        <div className="hidden md:invisible md:flex col-span-1 border-0 border-white self-stretch justify-center items-center ">
           left
         </div>
-
         <div className="col-span-9 md:col-span-4 border-0 border-green-800">
-          <h1 className="text-white font-semibold text-2xl p-4 md:p-0">Company Logo</h1>
+          <h1 className="text-white font-semibold text-2xl p-4 md:p-0 after:content-['_↗']">Company Logo</h1>
         </div>
-
         <div className="hidden md:block col-span-6 border-0 border-purple-400">
           <ul className="list-none flex space-x-2 text-white justify-end">
             <li>
               <Link
                 href="/"
-                className=" text-white p-2 px-6 border no-underline rounded-md hover:bg-purple-500 hover:text-white ease-in-out "
+                className=" text-white p-2 px-6 border no-underline rounded-md hover:bg-purple-500 hover:text-white ease-in-out after:content-['_↗']"
               >
                 Home
               </Link>
@@ -75,7 +75,7 @@ const Navigation = () => {
       <div
         className={
           openMobileMenu
-            ? "mobile block md:block bg-slate-700 w-full h-screen p-0 m-0 fixed top-0 right-0 ease-in-out"
+            ? "mobile block md:block bg-slate-900 w-full h-screen p-0 m-0 fixed top-0 right-0 ease-in-out"
             : "hidden"
         }
       >

@@ -273,8 +273,8 @@ export const blogPostsObj = [
 
   {
     id: 6,
-    url: "/Blog/nextjs-installation",
-    title: SEO_OBJ.FIRST_BLOG_POST.title,
+    url: "/Blog/nextjs-router",
+    title: "Nextjs Router",
     description: SEO_OBJ.FIRST_BLOG_POST.description,
     lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
     publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
