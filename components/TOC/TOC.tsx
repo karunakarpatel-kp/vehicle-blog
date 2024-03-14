@@ -15,11 +15,14 @@ const TOC = (props: any) => {
   return (
     <div className="relative">
       <div
-        className={`relative border border-slate-300 dark:border-slate-700 rounded-lg md:text-lg md:px-4 md:p-2 font-semibold cursor-pointer w-full shadow-inner mb-0 h-40 overflow-hidden ${
+        className={`relative border border-slate-200 dark:border-slate-700 rounded-lg md:text-lg md:px-4 md:p-2 cursor-pointer w-full shadow-inner mb-0 h-40 overflow-hidden ${
           openTOC ? " h-full overflow-auto transition-colors duration-1000" : ""
         }`}
       >
-        <div className="border-0 border-sky-400 clear-left p-0 m-0 " onClick={onTOCItemClickHandler}>
+        <div
+          className="border-0 border-sky-400 clear-left p-0 m-0 prose prose-slate prose-a:no-underline hover:prose-a:underline hover:prose-a:underline-offset-8 dark:prose-invert md:prose-lg "
+          onClick={onTOCItemClickHandler}
+        >
           {props.children}
         </div>
         <div
