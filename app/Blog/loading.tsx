@@ -1,7 +1,7 @@
 import React from "react";
 
 const BlogPageLoadingUI = () => {
-  return <div>This is the loading Screen of Blog Page.</div>;
+  return <div className="bg-black h-dvh w-dvw">h</div>;
 };
 
 export default BlogPageLoadingUI;

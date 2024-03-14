@@ -1,4 +1,4 @@
-import { BASE_URLS } from "@/Essential";
+import { BASE_URLS } from "Essential";
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {

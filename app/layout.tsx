@@ -4,6 +4,9 @@ import "./globals.css";
 import Navigation from "@Components/NavigationBar/Navigation";
 import { useState } from "react";
 import Footer from "@Components/Footer/Footer";
+import { MdLightMode } from "react-icons/md";
+
+import { CgDarkMode } from "react-icons/cg";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -28,10 +31,10 @@ const RootLayout = (props: RootLayoutProps) => {
         </main>
         <section>
           <div
-            className="darkMode fixed bottom-10 right-0 border bg-black text-white border-slate-700 p-2 px-4 cursor-pointer rounded-s-2xl dark:bg-white dark:text-black shadow-inner z-50"
+            className="darkMode fixed bottom-52 left-0 border bg-black text-white border-slate-700 p-2 px-4 cursor-pointer rounded-e-2xl dark:bg-slate-900  dark:text-black shadow-inner z-50"
             onClick={onDarkModeBtnClickHandler}
           >
-            {!darkMode ? "DRK" : "LHT"}
+            {!darkMode ? <MdLightMode size={25} fill="white" /> : <MdLightMode size={25} fill="white" />}
           </div>
         </section>
         <footer>

@@ -1,4 +1,4 @@
-import { BASE_URLS, SEO_OBJ } from "@/Essential";
+import { SEO_OBJ } from "Essential";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {

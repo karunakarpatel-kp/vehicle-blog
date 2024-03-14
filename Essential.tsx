@@ -274,7 +274,7 @@ export const blogPostsObj = [
   {
     id: 6,
     url: "/Blog/nextjs-router",
-    title: "Nextjs Router",
+    title: "Nextjs Router, This is the wonderfull place to learn bro...!",
     description: SEO_OBJ.FIRST_BLOG_POST.description,
     lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
     publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,

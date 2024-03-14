@@ -1,16 +1,15 @@
 import Link from "next/link";
 import React from "react";
 import { FaFacebookSquare, FaTwitterSquare } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaInstagramSquare } from "react-icons/fa";
 import { ImInstagram } from "react-icons/im";
+import { FaPinterestSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <>
       <div
         className={
-          "h-17  bg-slate-700 dark:bg-slate-900 dark:border-t dark:border-t-slate-800 md:ml-0 pl-2 grid grid-cols-12 absolute bottom-0 w-full "
+          "h-17  bg-slate-900 dark:bg-slate-900 dark:border-t dark:border-t-slate-800 md:ml-0 pl-2 grid grid-cols-12 absolute bottom-0 w-full "
         }
       >
         {/* Desktop */}
@@ -24,12 +23,22 @@ const Footer = () => {
           <ul className="list-none flex space-x-6 text-white justify-end mt-3">
             <li>
               <Link href="/" className="text-white">
+                <FaFacebookSquare size={25} />
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="text-white">
                 <FaTwitterSquare size={25} />
               </Link>
             </li>
             <li>
               <Link href="/Blog" className="text-white">
                 <ImInstagram size={23} className="pt-0" />
+              </Link>
+            </li>
+            <li>
+              <Link href="/Blog" className="text-white">
+                <FaPinterestSquare size={23} className="pt-0" />
               </Link>
             </li>
           </ul>
