@@ -6,8 +6,6 @@ import { useState } from "react";
 import Footer from "@Components/Footer/Footer";
 import { MdLightMode } from "react-icons/md";
 
-import { CgDarkMode } from "react-icons/cg";
-
 interface RootLayoutProps {
   children: React.ReactNode;
 }
