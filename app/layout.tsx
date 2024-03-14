@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@Components/NavigationBar/Navigation";
 import { useState } from "react";
+import Footer from "@Components/Footer/Footer";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -33,7 +34,9 @@ const RootLayout = (props: RootLayoutProps) => {
             {!darkMode ? "DRK" : "LHT"}
           </div>
         </section>
-        <footer>{/* Footer Goes Here */}</footer>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

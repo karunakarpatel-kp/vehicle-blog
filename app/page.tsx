@@ -15,7 +15,7 @@ export default function Home() {
         return (
           <div
             key={index}
-            className="shadow-xl mt-0 m-auto p-5 no-underline ring-1 ring-gray-200 dark:ring-slate-800 rounded-md hover:bg-slate-100 dark:bg-slate-900 dark:hover:bg-slate-900 "
+            className="shadow-xl mt-0 m-auto p-5 no-underline ring-1 ring-gray-200 dark:ring-slate-600 rounded-md hover:bg-slate-100 dark:bg-slate-900 dark:hover:bg-slate-900 "
           >
             <Link href={singleBlogPost.url} className="no-underline">
               <h1 className="text-3xl leading-snug  break-words font-bold font-sans mb-0">{singleBlogPost.title}</h1>

@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* body {
+  .TableOfContents ul {
+    list-style-type: none !important;
+  }
+  .TableOfContents ul li {
+    list-style: none;
+  }
+} */
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
