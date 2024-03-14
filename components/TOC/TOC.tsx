@@ -22,7 +22,11 @@ const TOC = (props: any) => {
         <div className="border-0 border-sky-400 clear-left p-0 m-0 " onClick={onTOCItemClickHandler}>
           {props.children}
         </div>
-        <div className="inset-x-0 -bottom-1 flex justify-center bg-gradient-to-t from-white pt-32 pb-3 pointer-events-none dark:from-slate-900 absolute">
+        <div
+          className={`inset-x-0 -bottom-1 flex justify-center  pt-32 pb-3 pointer-events-none dark:from-slate-900 absolute ${
+            !openTOC ? "bg-gradient-to-t from-white" : ""
+          } `}
+        >
           <button
             type="button"
             className="relative bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 text-sm text-white font-semibold h-10 px-4 rounded-lg flex items-center dark:bg-slate-700 dark:hover:bg-slate-600 pointer-events-auto"
