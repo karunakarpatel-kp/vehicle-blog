@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 const BlogPage = () => {
   return (
     <>
-      <div className=" grid  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-14 mt-8 mb-8">
+      <div className="loadingState">Loading...!</div>
+      {/* <div className=" grid  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-14 mt-8 mb-8">
         {blogPostsObj.map((singleBlogPost, index) => {
           return (
             <div
@@ -40,7 +41,7 @@ const BlogPage = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 
 const BlogPageLoadingUI = () => {
-  return <div className="bg-black h-dvh w-dvw">h</div>;
+  return <div className="text-lg">Loading...!</div>;
 };
 
 export default BlogPageLoadingUI;

@@ -15,11 +15,13 @@ const RootLayout = (props: RootLayoutProps) => {
   const onDarkModeBtnClickHandler = () => {
     setDarkMode(!darkMode);
   };
+
   return (
     <html lang="en" className={darkMode ? "dark transition-colors duration-100" : "transition-all duration-300"}>
       <body className="relative p-0 m-0 bg-white dark:bg-slate-900 dark:prose-invert prose prose-stone min-h-screen max-w-full border-0 border-sky-400">
-        <Navigation />
-        <header>{/* Header Goes Here */}</header>
+        <header>
+          <Navigation />
+        </header>
         <main className="border-0 border-white grid grid-cols-12 ">
           <section className="hidden md:invisible md:block md:col-span-1 border-2 border-green-800">One</section>
           <section className="col-span-12 md:col-span-10 border-0 border-red-500 m-auto w-full mb-32">

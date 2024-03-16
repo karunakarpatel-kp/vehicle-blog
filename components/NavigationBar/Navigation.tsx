@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Logo from "public/Logo.svg";
 import Image from "next/image";
-import { FaHome } from "react-icons/fa";
+import { FaCarSide, FaHome } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImBlog } from "react-icons/im";
 import { useRouter } from "next/navigation";
@@ -92,9 +92,14 @@ const Navigation = () => {
                 <FaHome size={27} />
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/Blog" className="text-white">
                 <ImBlog size={25} className="pt-0" />
+              </Link>
+            </li> */}
+            <li>
+              <Link href="/cars" className="text-white">
+                <FaCarSide size={25} className="pt-0" />
               </Link>
             </li>
             {/* <li>
@@ -202,10 +207,9 @@ const Navigation = () => {
               onClick={onCloseClickHandler}
             >
               <span>
-                {" "}
-                <ImBlog size={25} className="pt-0" />
+                <FaCarSide size={25} className="pt-0" />
               </span>
-              Blog
+              Cars Blog
             </Link>
           </li>
           {/* <li className="p-3 m-0 -mt-2">

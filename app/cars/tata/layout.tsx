@@ -1,18 +1,21 @@
-import React from "react";
+import React, { Suspense, useState } from "react";
 import { MdLightMode } from "react-icons/md";
 import { FaArrowCircleUp } from "react-icons/fa";
 import Link from "next/link";
 import Sharing from "@Components/SocialShare/Sharing";
+import TataPagesLoadingUIScreen from "./loading";
 
-const MarkDownLayout = (props: any) => {
+const TataPagesMarkdownLayout = (props: any) => {
   return (
     <>
-      <section
-        className="p-7 mt-10 mb-4 prose-lg prose-slate md:prose-lg lg:prose-xl dark:prose-invert  lg:max-w-screen-lg m-auto min-h-full  prose-h1:leading-slug md:prose-img:h-[520px]  prose-img:rounded-lg"
-        id="top"
-      >
-        {props.children}
-      </section>
+      <Suspense fallback={<TataPagesLoadingUIScreen />}>
+        <section
+          className="p-7 mt-10 mb-4 prose-lg prose-slate md:prose-lg lg:prose-xl dark:prose-invert  lg:max-w-screen-lg m-auto min-h-full  prose-h1:leading-slug md:prose-img:h-[520px]  prose-img:rounded-lg"
+          id="top"
+        >
+          {props.children}
+        </section>
+      </Suspense>
       <section className=" max-w-screen-lg m-auto ">
         <Sharing />
       </section>
@@ -27,4 +30,4 @@ const MarkDownLayout = (props: any) => {
   );
 };
 
-export default MarkDownLayout;
+export default TataPagesMarkdownLayout;

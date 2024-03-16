@@ -241,8 +241,8 @@ export const blogPostsObj = [
 
   {
     id: 4,
-    url: "/Blog/nextjs-installation",
-    title: SEO_OBJ.FIRST_BLOG_POST.title,
+    url: "/cars/tata/tata-adas",
+    title: "TATA ADAS Features",
     description: "lorem Karunakar simple Description",
     lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
     publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
@@ -257,8 +257,8 @@ export const blogPostsObj = [
 
   {
     id: 5,
-    url: "/Blog/nextjs-installation",
-    title: SEO_OBJ.FIRST_BLOG_POST.title,
+    url: "/cars/tata/tata-safari",
+    title: "Tata Safari Blog Post",
     description: "lorem Karunakar simple Description",
     lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
     publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
