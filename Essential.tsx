@@ -210,7 +210,7 @@ export const blogPostsObj = [
 
   {
     id: 2,
-    url: "/kia/kia-seltos",
+    url: "/Blog/nextjs-router",
     title: "KIA Seltos Blog Post In Here...!",
     description: SEO_OBJ.FIRST_BLOG_POST.description,
     lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
@@ -225,7 +225,7 @@ export const blogPostsObj = [
   },
   {
     id: 3,
-    url: "/Blog/nextjs-installation",
+    url: "/Blog/nextjs-router",
     title: SEO_OBJ.FIRST_BLOG_POST.title,
     description: SEO_OBJ.FIRST_BLOG_POST.description,
     lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
@@ -241,7 +241,7 @@ export const blogPostsObj = [
 
   {
     id: 4,
-    url: "/cars/tata/tata-adas",
+    url: "/Blog/nextjs-router",
     title: "TATA ADAS Features",
     description: "lorem Karunakar simple Description",
     lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
@@ -257,7 +257,7 @@ export const blogPostsObj = [
 
   {
     id: 5,
-    url: "/cars/tata/tata-safari",
+    url: "/Blog/nextjs-router",
     title: "Tata Safari Blog Post",
     description: "lorem Karunakar simple Description",
     lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
@@ -273,6 +273,37 @@ export const blogPostsObj = [
 
   {
     id: 6,
+    url: "/Blog/nextjs-router",
+    title: "Nextjs Router, This is the wonderfull place to learn bro...!",
+    description: SEO_OBJ.FIRST_BLOG_POST.description,
+    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+    tags: [
+      { tag: "Cars", href: "url" },
+      { tag: "Tata", href: "url" },
+      { tag: "Tata Safari", href: "url" },
+    ],
+    featuredImage: textToImageWelcomeImage,
+    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  },
+  {
+    id: 7,
+    url: "/Blog/nextjs-installation",
+    title: "Nextjs Router, This is the wonderfull place to learn bro...!",
+    description: SEO_OBJ.FIRST_BLOG_POST.description,
+    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+    tags: [
+      { tag: "Cars", href: "url" },
+      { tag: "Tata", href: "url" },
+      { tag: "Tata Safari", href: "url" },
+    ],
+    featuredImage: textToImageWelcomeImage,
+    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  },
+
+  {
+    id: 8,
     url: "/Blog/nextjs-router",
     title: "Nextjs Router, This is the wonderfull place to learn bro...!",
     description: SEO_OBJ.FIRST_BLOG_POST.description,
