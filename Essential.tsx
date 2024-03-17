@@ -210,8 +210,8 @@ export const blogPostsObj = [
 
   {
     id: 2,
-    url: "/Blog/nextjs-installation",
-    title: SEO_OBJ.FIRST_BLOG_POST.title,
+    url: "/kia/kia-seltos",
+    title: "KIA Seltos Blog Post In Here...!",
     description: SEO_OBJ.FIRST_BLOG_POST.description,
     lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
     publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
