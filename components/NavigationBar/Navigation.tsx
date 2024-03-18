@@ -55,9 +55,9 @@ const Navigation = () => {
               transform="translate(89)"
               // fill="#ffca3c"
               fill="white"
-              font-size="35"
-              font-family="SegoeUI-Semibold, Segoe UI"
-              font-weight="600"
+              fontSize="35"
+              fontFamily="SegoeUI-Semibold, Segoe UI"
+              fontWeight="600"
             >
               <tspan x="0" y="40">
                 Karunakar Patel
@@ -68,9 +68,9 @@ const Navigation = () => {
               transform="translate(89 79)"
               // fill="#ffca3c"
               fill="white"
-              font-size="35"
-              font-family="SegoeUI-Semibold, Segoe UI"
-              font-weight="600"
+              fontSize="35"
+              fontFamily="SegoeUI-Semibold, Segoe UI"
+              fontWeight="600"
             >
               <tspan x="0" y="0">
                 Good Boy
@@ -98,7 +98,7 @@ const Navigation = () => {
               </Link>
             </li> */}
             <li>
-              <Link href="/cars" className="text-white">
+              <Link href="/Blog" className="text-white">
                 <FaCarSide size={25} className="pt-0" />
               </Link>
             </li>
@@ -149,9 +149,9 @@ const Navigation = () => {
               transform="translate(89)"
               // fill="#ffca3c"
               fill="white"
-              font-size="35"
-              font-family="SegoeUI-Semibold, Segoe UI"
-              font-weight="600"
+              fontSize="35"
+              fontFamily="SegoeUI-Semibold, Segoe UI"
+              fontWeight="600"
             >
               <tspan x="0" y="40">
                 Karunakar Patel
@@ -162,9 +162,9 @@ const Navigation = () => {
               transform="translate(89 79)"
               // fill="#ffca3c"
               fill="white"
-              font-size="35"
-              font-family="SegoeUI-Semibold, Segoe UI"
-              font-weight="600"
+              fontSize="35"
+              fontFamily="SegoeUI-Semibold, Segoe UI"
+              fontWeight="600"
             >
               <tspan x="0" y="0">
                 Good Boy
