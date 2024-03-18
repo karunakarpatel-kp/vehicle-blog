@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Logo from "public/Logo.svg";
 import Image from "next/image";
-import { FaCarSide, FaHome } from "react-icons/fa";
+import { FaCar, FaCarSide, FaHome } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImBlog } from "react-icons/im";
 import { useRouter } from "next/navigation";
@@ -28,7 +28,7 @@ const Navigation = () => {
       <div
         className={
           !openMobileMenu
-            ? "h-16  bg-slate-900 dark:bg-slate-900 dark:border-b dark:border-b-slate-800 dark:mt-2 md:ml-0 pl-2 grid grid-cols-12"
+            ? "h-16  bg-slate-900 dark:bg-slate-900 dark:border-b dark:border-b-slate-700  md:ml-0 pl-2 grid grid-cols-12"
             : ""
         }
       >
@@ -51,7 +51,7 @@ const Navigation = () => {
             />
             <text
               id="Text_2_Image"
-              data-name="Text 2 Image"
+              data-name="Karunakar Patel"
               transform="translate(89)"
               // fill="#ffca3c"
               fill="white"
@@ -60,7 +60,7 @@ const Navigation = () => {
               fontWeight="600"
             >
               <tspan x="0" y="40">
-                Karunakar Patel
+                Vehicle
               </tspan>
             </text>
             <text
@@ -73,7 +73,7 @@ const Navigation = () => {
               fontWeight="600"
             >
               <tspan x="0" y="0">
-                Good Boy
+                Masti
               </tspan>
             </text>
             <path

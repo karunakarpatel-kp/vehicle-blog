@@ -14,7 +14,7 @@ import {
 } from "next-share";
 import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
-import { blogPostsObj } from "Essential";
+import { SEO_OBJ, blogPostsObj } from "Essential";
 
 const Sharing = () => {
   const pathName = usePathname();

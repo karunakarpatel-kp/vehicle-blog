@@ -288,8 +288,8 @@ export const blogPostsObj = [
   },
   {
     id: 7,
-    url: "/Blog/nextjs-installation",
-    title: "Nextjs Router, This is the wonderfull place to learn bro...!",
+    url: "/cars/tata/tata-harrier",
+    title: "Tata Harrier, This is the wonderfull place to Tata Harrier...!",
     description: SEO_OBJ.FIRST_BLOG_POST.description,
     lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
     publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
@@ -304,8 +304,8 @@ export const blogPostsObj = [
 
   {
     id: 8,
-    url: "/Blog/nextjs-router",
-    title: "Nextjs Router, This is the wonderfull place to learn bro...!",
+    url: "/cars/tata/tata_safari",
+    title: "Tata Safari Blog Post In Here...!",
     description: SEO_OBJ.FIRST_BLOG_POST.description,
     lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
     publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
