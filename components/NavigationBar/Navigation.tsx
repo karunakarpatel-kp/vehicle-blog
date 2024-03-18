@@ -98,7 +98,7 @@ const Navigation = () => {
               </Link>
             </li> */}
             <li>
-              <Link href="/Blog" className="text-white">
+              <Link href="/cars" className="text-white">
                 <FaCarSide size={25} className="pt-0" />
               </Link>
             </li>

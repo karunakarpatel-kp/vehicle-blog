@@ -39,12 +39,13 @@ export const dynamicLastUpdatedTime = () => {
 interface Base_Url_Props {
   HOME_PAGE_BASE_URL: string;
   CARS_PAGE_BASE_URL: string;
+  TATA_PAGE_BASE_URL: string;
 }
 
 export const BASE_URLS: Base_Url_Props = {
   HOME_PAGE_BASE_URL: process.env.HOME_PAGE_BASE_URL!,
   CARS_PAGE_BASE_URL: `${process.env.HOME_PAGE_BASE_URL}/cars`,
-  // TATA_PAGE_BASE_URL: "https://www.vehiclemasti.com/cars/tata",
+  TATA_PAGE_BASE_URL: `${process.env.HOME_PAGE_BASE_URL}/cars/tata`,
   // KIA_PAGE_BASE_URL: "https://www.vehiclemasti.com/cars/kia",
 };
 
@@ -60,6 +61,12 @@ interface Blog_Post_URL_Props {
 
   DISCLAIMER_PAGE_ABSOLUTE: string;
   DISCLAIMER_PAGE_RELATIVE: string;
+
+  CARS_HOME_PAGE_ABSOLUTE: string;
+  CARS_HOME_PAGE_RELATIVE: string;
+
+  TATA_SAFARI_BLOG_PAGE_ABSOLUTE: string;
+  TATA_SAFARI_BLOG_PAGE_RELATIVE: string;
 }
 
 export const blogPostURLS: Blog_Post_URL_Props = {
@@ -74,6 +81,12 @@ export const blogPostURLS: Blog_Post_URL_Props = {
 
   DISCLAIMER_PAGE_ABSOLUTE: `${BASE_URLS.HOME_PAGE_BASE_URL}/disclaimer`,
   DISCLAIMER_PAGE_RELATIVE: "/disclaimer",
+
+  CARS_HOME_PAGE_ABSOLUTE: `${BASE_URLS.CARS_PAGE_BASE_URL}`,
+  CARS_HOME_PAGE_RELATIVE: "/cars",
+
+  TATA_SAFARI_BLOG_PAGE_ABSOLUTE: `${BASE_URLS.TATA_PAGE_BASE_URL}/tata_safari`,
+  TATA_SAFARI_BLOG_PAGE_RELATIVE: "/cars/tata/tata_safari",
 };
 
 interface Tag {
@@ -92,6 +105,7 @@ interface BlogPage {
   featuredImageAltText: string;
   ogImageURL: string;
   changeFrequency: "weekly" | "always" | "never" | "daily" | "monthly";
+  category?: string;
 }
 interface Tag {
   tag: string;
@@ -104,6 +118,8 @@ interface HomePage extends BlogPage {
 interface PolicyPage extends BlogPage {}
 interface ContactPage extends BlogPage {}
 interface DisclaimerPage extends BlogPage {}
+interface CarsHomePage extends BlogPage {}
+interface TataSafariBlogPage extends BlogPage {}
 
 interface ImageCompressionToolPage extends BlogPage {
   tags: Tag[];
@@ -114,7 +130,8 @@ interface SEOObjProps {
   POLICY_PAGE: PolicyPage;
   CONTACT_PAGE: ContactPage;
   DISCLAIMER_PAGE: DisclaimerPage;
-  FIRST_BLOG_POST: DisclaimerPage;
+  CARS_HOME_PAGE: CarsHomePage;
+  TATA_SAFARI_BLOG_POST: TataSafariBlogPage;
 }
 
 export const SEO_OBJ: SEOObjProps = {
@@ -176,10 +193,10 @@ export const SEO_OBJ: SEOObjProps = {
     changeFrequency: "weekly",
   },
 
-  FIRST_BLOG_POST: {
-    absoluteURL: "hi",
-    relativeURL: "hi",
-    title: "A complete guide to install Tailwind css in Next.js application",
+  CARS_HOME_PAGE: {
+    absoluteURL: blogPostURLS.CARS_HOME_PAGE_ABSOLUTE,
+    relativeURL: blogPostURLS.CARS_HOME_PAGE_RELATIVE,
+    title: "How to install tailwind css in Next.js application",
     description:
       "Welcome to ai-text-to-image-generator disclaimer page. In here you can find all the details of about AITextToImageGenerator Disclaimer and its policies.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
@@ -189,132 +206,163 @@ export const SEO_OBJ: SEOObjProps = {
     ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/welcome-page.png`,
     changeFrequency: "weekly",
   },
+
+  TATA_SAFARI_BLOG_POST: {
+    absoluteURL: blogPostURLS.TATA_SAFARI_BLOG_PAGE_ABSOLUTE,
+    relativeURL: blogPostURLS.TATA_SAFARI_BLOG_PAGE_RELATIVE,
+    title: "Tata Safari Facelift 2023: A closer look into modern SUV.",
+    description:
+      "Here is the ultimate guide to the Tata Safari SUV, where everything you need to know about this car. Here, I will highlight the Tata Safari 2023 facelift car, prices, reviews, exterior, interior, mileage, color, images, facelift, on-road prices, power, comfort, and many more about the Tata Safari car. Read on to find out more.",
+    lastUpdateTime: `${dynamicLastUpdatedTime()}`,
+    publishedTime: "2024-02-25T12:38:42+05:30",
+    featuredImage: vehicleMasti,
+    featuredImageAltText: "ai-text-to-image-generator",
+    ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/welcome-page.png`,
+    changeFrequency: "weekly",
+    category: "tata",
+  },
 };
 
 export const blogPostsObj = [
   {
     id: 1,
-    url: "/Blog/nextjs-installation",
-    title: SEO_OBJ.FIRST_BLOG_POST.title,
-    description: SEO_OBJ.FIRST_BLOG_POST.description,
-    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+    url: SEO_OBJ.TATA_SAFARI_BLOG_POST.relativeURL,
+    title: SEO_OBJ.TATA_SAFARI_BLOG_POST.title,
+    description: SEO_OBJ.TATA_SAFARI_BLOG_POST.description,
+    lastUpdateTime: SEO_OBJ.TATA_SAFARI_BLOG_POST.lastUpdateTime,
+    publishedTime: SEO_OBJ.TATA_SAFARI_BLOG_POST.publishedTime,
     tags: [
       { tag: "Cars", href: "url" },
       { tag: "Tata", href: "url" },
       { tag: "Tata Safari", href: "url" },
     ],
-    featuredImage: textToImageWelcomeImage,
-    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+    featuredImage: SEO_OBJ.TATA_SAFARI_BLOG_POST.featuredImage,
+    featuredImageAltText: SEO_OBJ.TATA_SAFARI_BLOG_POST.featuredImageAltText,
   },
 
   {
     id: 2,
-    url: "/Blog/nextjs-router",
-    title: "KIA Seltos Blog Post In Here...!",
-    description: SEO_OBJ.FIRST_BLOG_POST.description,
-    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+    url: SEO_OBJ.TATA_SAFARI_BLOG_POST.relativeURL,
+    title: SEO_OBJ.TATA_SAFARI_BLOG_POST.title,
+    description: SEO_OBJ.TATA_SAFARI_BLOG_POST.description,
+    lastUpdateTime: SEO_OBJ.TATA_SAFARI_BLOG_POST.lastUpdateTime,
+    publishedTime: SEO_OBJ.TATA_SAFARI_BLOG_POST.publishedTime,
     tags: [
       { tag: "Cars", href: "url" },
       { tag: "Tata", href: "url" },
       { tag: "Tata Safari", href: "url" },
     ],
-    featuredImage: textToImageWelcomeImage,
-    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
-  },
-  {
-    id: 3,
-    url: "/Blog/nextjs-router",
-    title: SEO_OBJ.FIRST_BLOG_POST.title,
-    description: SEO_OBJ.FIRST_BLOG_POST.description,
-    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
-    tags: [
-      { tag: "Cars", href: "url" },
-      { tag: "Tata", href: "url" },
-      { tag: "Tata Safari", href: "url" },
-    ],
-    featuredImage: textToImageWelcomeImage,
-    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+    featuredImage: SEO_OBJ.TATA_SAFARI_BLOG_POST.featuredImage,
+    featuredImageAltText: SEO_OBJ.TATA_SAFARI_BLOG_POST.featuredImageAltText,
   },
 
-  {
-    id: 4,
-    url: "/Blog/nextjs-router",
-    title: "TATA ADAS Features",
-    description: "lorem Karunakar simple Description",
-    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
-    tags: [
-      { tag: "Cars", href: "url" },
-      { tag: "Tata", href: "url" },
-      { tag: "Tata Safari", href: "url" },
-    ],
-    featuredImage: textToImageWelcomeImage,
-    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
-  },
+  // {
+  //   id: 2,
+  //   url: "/Blog/nextjs-router",
+  //   title: "KIA Seltos Blog Post In Here...!",
+  //   description: SEO_OBJ.FIRST_BLOG_POST.description,
+  //   lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+  //   publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+  //   tags: [
+  //     { tag: "Cars", href: "url" },
+  //     { tag: "Tata", href: "url" },
+  //     { tag: "Tata Safari", href: "url" },
+  //   ],
+  //   featuredImage: textToImageWelcomeImage,
+  //   featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  // },
+  // {
+  //   id: 3,
+  //   url: "/Blog/nextjs-router",
+  //   title: SEO_OBJ.FIRST_BLOG_POST.title,
+  //   description: SEO_OBJ.FIRST_BLOG_POST.description,
+  //   lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+  //   publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+  //   tags: [
+  //     { tag: "Cars", href: "url" },
+  //     { tag: "Tata", href: "url" },
+  //     { tag: "Tata Safari", href: "url" },
+  //   ],
+  //   featuredImage: textToImageWelcomeImage,
+  //   featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  // },
 
-  {
-    id: 5,
-    url: "/Blog/nextjs-router",
-    title: "Tata Safari Blog Post",
-    description: "lorem Karunakar simple Description",
-    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
-    tags: [
-      { tag: "Cars", href: "url" },
-      { tag: "Tata", href: "url" },
-      { tag: "Tata Safari", href: "url" },
-    ],
-    featuredImage: textToImageWelcomeImage,
-    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
-  },
+  // {
+  //   id: 4,
+  //   url: "/Blog/nextjs-router",
+  //   title: "TATA ADAS Features",
+  //   description: "lorem Karunakar simple Description",
+  //   lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+  //   publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+  //   tags: [
+  //     { tag: "Cars", href: "url" },
+  //     { tag: "Tata", href: "url" },
+  //     { tag: "Tata Safari", href: "url" },
+  //   ],
+  //   featuredImage: textToImageWelcomeImage,
+  //   featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  // },
 
-  {
-    id: 6,
-    url: "/Blog/nextjs-router",
-    title: "Nextjs Router, This is the wonderfull place to learn bro...!",
-    description: SEO_OBJ.FIRST_BLOG_POST.description,
-    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
-    tags: [
-      { tag: "Cars", href: "url" },
-      { tag: "Tata", href: "url" },
-      { tag: "Tata Safari", href: "url" },
-    ],
-    featuredImage: textToImageWelcomeImage,
-    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
-  },
-  {
-    id: 7,
-    url: "/cars/tata/tata-harrier",
-    title: "Tata Harrier, This is the wonderfull place to Tata Harrier...!",
-    description: SEO_OBJ.FIRST_BLOG_POST.description,
-    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
-    tags: [
-      { tag: "Cars", href: "url" },
-      { tag: "Tata", href: "url" },
-      { tag: "Tata Safari", href: "url" },
-    ],
-    featuredImage: textToImageWelcomeImage,
-    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
-  },
+  // {
+  //   id: 5,
+  //   url: "/Blog/nextjs-router",
+  //   title: "Tata Safari Blog Post",
+  //   description: "lorem Karunakar simple Description",
+  //   lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+  //   publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+  //   tags: [
+  //     { tag: "Cars", href: "url" },
+  //     { tag: "Tata", href: "url" },
+  //     { tag: "Tata Safari", href: "url" },
+  //   ],
+  //   featuredImage: textToImageWelcomeImage,
+  //   featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  // },
 
-  {
-    id: 8,
-    url: "/cars/tata/tata_safari",
-    title: "Tata Safari Blog Post In Here...!",
-    description: SEO_OBJ.FIRST_BLOG_POST.description,
-    lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-    publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
-    tags: [
-      { tag: "Cars", href: "url" },
-      { tag: "Tata", href: "url" },
-      { tag: "Tata Safari", href: "url" },
-    ],
-    featuredImage: textToImageWelcomeImage,
-    featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
-  },
+  // {
+  //   id: 6,
+  //   url: "/Blog/nextjs-router",
+  //   title: "Nextjs Router, This is the wonderfull place to learn bro...!",
+  //   description: SEO_OBJ.FIRST_BLOG_POST.description,
+  //   lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+  //   publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+  //   tags: [
+  //     { tag: "Cars", href: "url" },
+  //     { tag: "Tata", href: "url" },
+  //     { tag: "Tata Safari", href: "url" },
+  //   ],
+  //   featuredImage: textToImageWelcomeImage,
+  //   featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  // },
+  // {
+  //   id: 7,
+  //   url: "/cars/tata/tata-harrier",
+  //   title: "Tata Harrier, This is the wonderfull place to Tata Harrier...!",
+  //   description: SEO_OBJ.FIRST_BLOG_POST.description,
+  //   lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+  //   publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+  //   tags: [
+  //     { tag: "Cars", href: "url" },
+  //     { tag: "Tata", href: "url" },
+  //     { tag: "Tata Safari", href: "url" },
+  //   ],
+  //   featuredImage: textToImageWelcomeImage,
+  //   featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  // },
+
+  // {
+  //   id: 8,
+  //   url: "/cars/tata/tata_safari",
+  //   title: "Tata Safari Blog Post In Here...!",
+  //   description: SEO_OBJ.FIRST_BLOG_POST.description,
+  //   lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
+  //   publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
+  //   tags: [
+  //     { tag: "Cars", href: "url" },
+  //     { tag: "Tata", href: "url" },
+  //     { tag: "Tata Safari", href: "url" },
+  //   ],
+  //   featuredImage: textToImageWelcomeImage,
+  //   featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  // },
 ];
