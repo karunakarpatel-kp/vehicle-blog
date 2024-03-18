@@ -4,7 +4,9 @@ import React from "react";
 const RootErrorPage = () => {
   return (
     <>
-      <p>This is the root Error Page in APP Folder</p>
+      <div className="h-full min-h-[69vh]">
+        <p>This is the root Error Page in APP Folder</p>
+      </div>
     </>
   );
 };

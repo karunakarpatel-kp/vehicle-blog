@@ -3,6 +3,7 @@ import { MdLightMode } from "react-icons/md";
 import { FaArrowCircleUp } from "react-icons/fa";
 import Link from "next/link";
 import Sharing from "@Components/SocialShare/Sharing";
+import TypedAnimation from "@Components/Animations/TypedAnimation";
 
 const MarkDownLayout = (props: any) => {
   return (
@@ -12,6 +13,9 @@ const MarkDownLayout = (props: any) => {
         id="top"
       >
         {props.children}
+        <section>
+          <TypedAnimation />
+        </section>
       </section>
       <section className=" max-w-screen-lg m-auto ">
         <Sharing />

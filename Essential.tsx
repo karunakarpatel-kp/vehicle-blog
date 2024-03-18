@@ -1,4 +1,5 @@
 import textToImageWelcomeImage from "./public/hi.jpg";
+import vehicleMasti from "@Public/google-analytics-nextjs.png";
 
 export const DateMonthYearForBlogPost = (lastUpdateTime: string) => {
   const months = [
@@ -37,10 +38,14 @@ export const dynamicLastUpdatedTime = () => {
 
 interface Base_Url_Props {
   HOME_PAGE_BASE_URL: string;
+  CARS_PAGE_BASE_URL: string;
 }
 
 export const BASE_URLS: Base_Url_Props = {
   HOME_PAGE_BASE_URL: process.env.HOME_PAGE_BASE_URL!,
+  CARS_PAGE_BASE_URL: `${process.env.HOME_PAGE_BASE_URL}/cars`,
+  // TATA_PAGE_BASE_URL: "https://www.vehiclemasti.com/cars/tata",
+  // KIA_PAGE_BASE_URL: "https://www.vehiclemasti.com/cars/kia",
 };
 
 interface Blog_Post_URL_Props {
@@ -117,21 +122,16 @@ export const SEO_OBJ: SEOObjProps = {
   HOME_PAGE: {
     absoluteURL: blogPostURLS.HOME_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.HOME_PAGE_RELATIVE,
-    title: "AI Text to Image Genertor",
+    title: "VehicleMasti: A hub for Automobile enthusiasts.",
     description:
-      "Our ai text to image generator utilizes advanced artificial intelligence algorithms to convert plain text into hd images. Whether you're creating social media graphics, presentations, or artistic designs, our platform simplifies the conversion process, offering a seamless user experience.",
+      "Welcome to VehicleMasti Blog! This is the perfect place for people who love automobiles whether you are a car enthusiast or a casual driver. You'll find easy-to-understand articles, maintenance tips, and reviews about different automobile manufacturers. Join our community and let's learn and grow together in the world of automobiles!",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-    publishedTime: "2024-02-25T12:38:42+05:30",
-    featuredImage: textToImageWelcomeImage,
-    featuredImageAltText: "ai-text-to-image-generator",
-    ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/welcome-page.png`,
-    changeFrequency: "daily",
-    tags: [
-      { tag: "ai-text-image-generator", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
-      { tag: "text-to-image-ai-tool", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
-      { tag: "text-to-image-generator", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
-      { tag: "Karunakar Patel", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
-    ],
+    publishedTime: "2023-10-20T19:07:55+00:00",
+    featuredImage: vehicleMasti,
+    featuredImageAltText: "a-person-with-computer",
+    tags: [{ tag: "Homepage", href: "/" }],
+    ogImageURL: `${process.env.HOME_PAGE_BASE_URL}/public/google-analytics-nextjs.png`,
+    changeFrequency: "weekly",
   },
 
   POLICY_PAGE: {

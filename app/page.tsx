@@ -1,12 +1,10 @@
+import CustomMetaData from "@Components/MetaData/CustomMetaData";
 import { SEO_OBJ, blogPostsObj } from "Essential";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: SEO_OBJ.HOME_PAGE.title,
-  description: "Simple Description",
-};
+// export const metadata: Metadata = <CustomMetaData />;
 
 export default function Home() {
   return (
