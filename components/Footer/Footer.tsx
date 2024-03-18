@@ -9,7 +9,7 @@ const Footer = () => {
     <>
       <div
         className={
-          "h-17  bg-slate-900 dark:bg-slate-900 dark:border-t dark:border-t-slate-800 md:ml-0 pl-2 md:grid grid-cols-12 absolute bottom-0 w-full "
+          " bg-slate-900 dark:bg-slate-900 dark:border-t dark:border-t-slate-800 md:ml-0 pl-2 md:grid grid-cols-12 w-full "
         }
       >
         {/* Desktop */}
