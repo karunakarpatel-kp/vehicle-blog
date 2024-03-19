@@ -2,7 +2,7 @@ import React from "react";
 import { MdLightMode } from "react-icons/md";
 import { FaArrowCircleUp } from "react-icons/fa";
 import Link from "next/link";
-import Sharing from "@Components/SocialShare/Sharing";
+import Sharing from "components/SocialShare/Sharing";
 
 const DisclaimerPageLayoutUI = (props: any) => {
   return (

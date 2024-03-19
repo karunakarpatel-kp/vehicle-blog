@@ -1,9 +1,9 @@
 "use client";
 import type { Metadata } from "next";
 import "./globals.css";
-import Navigation from "@Components/NavigationBar/Navigation";
+import Navigation from "components/NavigationBar/Navigation";
 import { useState } from "react";
-import Footer from "@Components/Footer/Footer";
+import Footer from "components/Footer/Footer";
 import { MdLightMode } from "react-icons/md";
 
 interface RootLayoutProps {
