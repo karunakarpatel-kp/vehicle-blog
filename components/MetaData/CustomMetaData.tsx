@@ -39,7 +39,7 @@ export function CustomMetaData(props: any) {
     title: filteredOBJ[0].title,
     description: filteredOBJ[0].description,
     verification: {
-      google: "Google Code In Here",
+      google: "G-PH29P82N32",
     },
     category: filteredOBJ[0].category,
     keywords: ["Karunakar Patel", "Tata", "tata safari"],
