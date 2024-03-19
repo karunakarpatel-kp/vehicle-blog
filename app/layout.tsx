@@ -22,7 +22,7 @@ const RootLayout = (props: RootLayoutProps) => {
         <header>
           <Navigation />
         </header>
-        <main className="border-0 border-white grid grid-cols-12 ">
+        <main className="border-0 border-red-900 grid grid-cols-12">
           <section className="hidden md:invisible md:block md:col-span-1 border-2 border-green-800">One</section>
           <section className="col-span-12 md:col-span-10 border-0 border-red-500 m-auto w-full mb-32">
             <article>{props.children}</article>
@@ -31,7 +31,7 @@ const RootLayout = (props: RootLayoutProps) => {
         </main>
         <section>
           <div
-            className="darkMode fixed bottom-52 left-0 border bg-black text-white border-slate-700 p-2 px-4 cursor-pointer rounded-e-2xl dark:bg-slate-900  dark:text-black shadow-inner z-50"
+            className="darkMode fixed bottom-52 left-0 border bg-brandColor text-white border-slate-700 p-2 px-4 cursor-pointer rounded-e-2xl dark:bg-slate-900  dark:text-black shadow-inner z-50"
             onClick={onDarkModeBtnClickHandler}
           >
             {!darkMode ? <MdLightMode size={25} fill="white" /> : <MdLightMode size={25} fill="white" />}

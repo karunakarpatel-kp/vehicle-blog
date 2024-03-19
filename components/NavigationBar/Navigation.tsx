@@ -1,34 +1,48 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "public/Logo.svg";
 import Image from "next/image";
 import { FaCar, FaCarSide, FaHome } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { ImBlog } from "react-icons/im";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { IoMdClose } from "react-icons/io";
+import KarunakarPatelImage from "@Public/karunakarImage.svg";
 
 const Navigation = () => {
-  const [openMobileMenu, setOpenMobileMenu] = React.useState<boolean>(false);
+  const [openMobileMenu, setOpenMobileMenu] = useState<boolean>(false);
+  const [homePage, setHomePage] = useState<boolean>(false);
   const navigate = useRouter();
+  const pathName = usePathname();
+
   const onOpenClickHandler = () => {
     console.log(openMobileMenu, "OPEN");
     setOpenMobileMenu(true);
   };
+
   const onCloseClickHandler = () => {
     console.log(openMobileMenu, "CLOSE");
     setOpenMobileMenu(false);
   };
+
   const onLogoClickHandler = () => {
     navigate.push("/");
   };
+
+  useEffect(() => {
+    if (pathName === "/") {
+      setHomePage(true);
+    } else {
+      setHomePage(false);
+    }
+  }, [pathName, homePage]);
+
   return (
     <>
       <div
         className={
           !openMobileMenu
-            ? "h-16  bg-slate-900 dark:bg-slate-900 dark:border-b dark:border-b-slate-700  md:ml-0 pl-2 grid grid-cols-12"
+            ? "h-16  bg-brandColor border-b border-b-slate-700 dark:bg-slate-900 dark:border-b dark:border-b-slate-700  md:ml-0 pl-2 grid grid-cols-12 fixed w-full z-50"
             : ""
         }
       >
@@ -218,6 +232,24 @@ const Navigation = () => {
             </Link>
           </li> */}
         </ul>
+      </div>
+
+      <div
+        className={`${
+          homePage
+            ? "bg-brandColor dark:bg-slate-900 dark:border-b dark:border-b-slate-700  border-0 border-red-900 px-10"
+            : "hidden"
+        }`}
+      >
+        <div className="border-0 border-white text-white   max-w-7xl m-auto pt-14">
+          <div className="kpImage border-0 border-sky-800 flex justify-center">
+            <Image src={KarunakarPatelImage} alt="Karunakar Patel Image" className="ring-2  rounded-full" />
+          </div>
+          <div className="text-white border-0 text-center pb-6">
+            <h1 className="text-white font-bold text-3xl md:text-4xl">Welcome To VehicleMasti</h1>
+            <p className="text-white font-semibold text-xl">A Place where you will learn about Automobiles</p>
+          </div>
+        </div>
       </div>
     </>
   );

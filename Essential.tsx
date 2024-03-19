@@ -1,5 +1,5 @@
-import textToImageWelcomeImage from "./public/hi.jpg";
-import vehicleMasti from "@Public/google-analytics-nextjs.png";
+import TataWelcomImage from "@Public/safari-overview-d-banner-27-23.jpg";
+import vehicleMasti from "@Public/welcome-vehiclemasti.png";
 
 export const DateMonthYearForBlogPost = (lastUpdateTime: string) => {
   const months = [
@@ -106,6 +106,7 @@ interface BlogPage {
   ogImageURL: string;
   changeFrequency: "weekly" | "always" | "never" | "daily" | "monthly";
   category?: string;
+  tags: { tag: string; href: string }[];
 }
 interface Tag {
   tag: string;
@@ -120,10 +121,6 @@ interface ContactPage extends BlogPage {}
 interface DisclaimerPage extends BlogPage {}
 interface CarsHomePage extends BlogPage {}
 interface TataSafariBlogPage extends BlogPage {}
-
-interface ImageCompressionToolPage extends BlogPage {
-  tags: Tag[];
-}
 
 interface SEOObjProps {
   HOME_PAGE: HomePage;
@@ -145,66 +142,70 @@ export const SEO_OBJ: SEOObjProps = {
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2023-10-20T19:07:55+00:00",
     featuredImage: vehicleMasti,
-    featuredImageAltText: "a-person-with-computer",
+    featuredImageAltText: "vehiclemasti-header-image",
     tags: [{ tag: "Homepage", href: "/" }],
-    ogImageURL: `${process.env.HOME_PAGE_BASE_URL}/public/google-analytics-nextjs.png`,
+    ogImageURL: `${process.env.HOME_PAGE_BASE_URL}/public/safari-overview-d-banner-27-23.jpg`,
     changeFrequency: "weekly",
   },
 
   POLICY_PAGE: {
     absoluteURL: blogPostURLS.PRIVACY_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.PRIVACY_PAGE_RELATIVE,
-    title: "Privacy Policy | AITextToImageGenerator",
+    title: "Privacy Policy | VehicleMasti",
     description:
-      "Welcome to ai text to image generator privacy policy. In here you can find all the details about privacy policy of AITextToImageGenerator",
+      "Welcome to VehicleMasti privacy policy. In here you can find all the details about privacy policy of VehcileMasti",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-    publishedTime: "2024-02-25T12:38:42+05:30",
-    featuredImage: textToImageWelcomeImage,
-    featuredImageAltText: "ai-text-to-image-generator",
-    ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/welcome-page.png`,
+    publishedTime: "2023-12-09T19:07:55+00:00",
+    featuredImage: vehicleMasti,
+    ogImageURL: `${process.env.HOME_PAGE_BASE_URL}/public/safari-overview-d-banner-27-23.jpg`,
     changeFrequency: "weekly",
+    featuredImageAltText: "vehiclemasti-header-image",
+    tags: [{ tag: "Policy Page", href: "/privacy" }],
   },
 
   CONTACT_PAGE: {
     absoluteURL: blogPostURLS.CONTACT_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.CONTACT_PAGE_RELATIVE,
-    title: "Contact Us | AITextToImageGenerator",
+    title: "Contact Us | VehicleMasti",
     description:
-      "Welcome to ai text to image generator contact page. In here you can find all the details of about ai-text-to-image-generator contact information and a way to contact administrator of the ai text to image generator site.",
+      "Welcome to VehicleMasti contact page. In here you can find all the details of about VehicleMasti contact information and a way to contact administrator of the VehicleMasti site.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-    publishedTime: "2024-02-25T12:38:42+05:30",
-    featuredImage: textToImageWelcomeImage,
-    featuredImageAltText: "ai-text-to-image-generator",
-    ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/welcome-page.png`,
+    publishedTime: "2023-12-09T19:07:55+00:00",
+    featuredImage: vehicleMasti,
+    featuredImageAltText: "vehiclemasti-header-image",
+    ogImageURL: `${process.env.HOME_PAGE_BASE_URL}/public/safari-overview-d-banner-27-23.jpg`,
     changeFrequency: "weekly",
+    tags: [{ tag: "Contact Page", href: "/contact" }],
   },
 
   DISCLAIMER_PAGE: {
     absoluteURL: blogPostURLS.DISCLAIMER_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.DISCLAIMER_PAGE_RELATIVE,
-    title: "How to install tailwind css in Next.js application",
+    title: "Disclaimer | VehicleMasti",
     description:
-      "Welcome to ai-text-to-image-generator disclaimer page. In here you can find all the details of about AITextToImageGenerator Disclaimer and its policies.",
+      "Welcome to VehicleMasti disclaimer page. In here you can find all the details of about VehicleMasti's Disclaimer and its policies.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-    publishedTime: "2024-02-25T12:38:42+05:30",
-    featuredImage: textToImageWelcomeImage,
-    featuredImageAltText: "ai-text-to-image-generator",
-    ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/welcome-page.png`,
+    publishedTime: "2023-12-09T19:07:55+00:00",
+    featuredImage: vehicleMasti,
+    featuredImageAltText: "vehiclemasti-header-image",
+    ogImageURL: `${process.env.HOME_PAGE_BASE_URL}/public/safari-overview-d-banner-27-23.jpg`,
     changeFrequency: "weekly",
+    tags: [{ tag: "Disclaimer Page", href: "/disclaimer" }],
   },
 
   CARS_HOME_PAGE: {
     absoluteURL: blogPostURLS.CARS_HOME_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.CARS_HOME_PAGE_RELATIVE,
-    title: "How to install tailwind css in Next.js application",
+    title: "Cars: A Hub for Cars Enthusiasts | VehicleMasti",
     description:
-      "Welcome to ai-text-to-image-generator disclaimer page. In here you can find all the details of about AITextToImageGenerator Disclaimer and its policies.",
+      "Welcome to VehicleMasti, a car informational page where I share my passion for cars and everything related to them. Here, I will write about different types of cars, their features, advantages, reviews, latest news, prices, comparisons, disadvantages, tips, tricks, and many more. Stay updated with the latest news about cars and let us learn and grow together in the world of innovative cars.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-    publishedTime: "2024-02-25T12:38:42+05:30",
-    featuredImage: textToImageWelcomeImage,
-    featuredImageAltText: "ai-text-to-image-generator",
-    ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/welcome-page.png`,
+    publishedTime: "2023-10-20T19:07:55+00:00",
+    featuredImage: vehicleMasti,
+    featuredImageAltText: "vehiclemasti-header-image",
+    ogImageURL: `${process.env.HOME_PAGE_BASE_URL}/public/safari-overview-d-banner-27-23.jpg`,
     changeFrequency: "weekly",
+    tags: [{ tag: "Cars", href: "/cars" }],
   },
 
   TATA_SAFARI_BLOG_POST: {
@@ -213,13 +214,19 @@ export const SEO_OBJ: SEOObjProps = {
     title: "Tata Safari Facelift 2023: A closer look into modern SUV.",
     description:
       "Here is the ultimate guide to the Tata Safari SUV, where everything you need to know about this car. Here, I will highlight the Tata Safari 2023 facelift car, prices, reviews, exterior, interior, mileage, color, images, facelift, on-road prices, power, comfort, and many more about the Tata Safari car. Read on to find out more.",
+    publishedTime: "2023-11-14T09:07:55+00:00",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-    publishedTime: "2024-02-25T12:38:42+05:30",
-    featuredImage: vehicleMasti,
-    featuredImageAltText: "ai-text-to-image-generator",
+    featuredImageAltText: "Tata-safari-banner",
+    featuredImage: TataWelcomImage,
     ogImageURL: `${BASE_URLS.HOME_PAGE_BASE_URL}/welcome-page.png`,
     changeFrequency: "weekly",
-    category: "tata",
+    category: "Tata",
+    tags: [
+      { tag: "Cars", href: `${blogPostURLS.CARS_HOME_PAGE_RELATIVE}` },
+      { tag: "Tata Safari", href: `${blogPostURLS.TATA_SAFARI_BLOG_PAGE_RELATIVE}` },
+      { tag: "Tata", href: `${blogPostURLS.TATA_SAFARI_BLOG_PAGE_RELATIVE}` },
+      { tag: "Vehiclemasti", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
+    ],
   },
 };
 
@@ -231,138 +238,19 @@ export const blogPostsObj = [
     description: SEO_OBJ.TATA_SAFARI_BLOG_POST.description,
     lastUpdateTime: SEO_OBJ.TATA_SAFARI_BLOG_POST.lastUpdateTime,
     publishedTime: SEO_OBJ.TATA_SAFARI_BLOG_POST.publishedTime,
-    tags: [
-      { tag: "Cars", href: "url" },
-      { tag: "Tata", href: "url" },
-      { tag: "Tata Safari", href: "url" },
-    ],
+    tags: SEO_OBJ.TATA_SAFARI_BLOG_POST.tags,
     featuredImage: SEO_OBJ.TATA_SAFARI_BLOG_POST.featuredImage,
     featuredImageAltText: SEO_OBJ.TATA_SAFARI_BLOG_POST.featuredImageAltText,
   },
-
-  {
-    id: 2,
-    url: SEO_OBJ.TATA_SAFARI_BLOG_POST.relativeURL,
-    title: SEO_OBJ.TATA_SAFARI_BLOG_POST.title,
-    description: SEO_OBJ.TATA_SAFARI_BLOG_POST.description,
-    lastUpdateTime: SEO_OBJ.TATA_SAFARI_BLOG_POST.lastUpdateTime,
-    publishedTime: SEO_OBJ.TATA_SAFARI_BLOG_POST.publishedTime,
-    tags: [
-      { tag: "Cars", href: "url" },
-      { tag: "Tata", href: "url" },
-      { tag: "Tata Safari", href: "url" },
-    ],
-    featuredImage: SEO_OBJ.TATA_SAFARI_BLOG_POST.featuredImage,
-    featuredImageAltText: SEO_OBJ.TATA_SAFARI_BLOG_POST.featuredImageAltText,
-  },
-
   // {
-  //   id: 2,
-  //   url: "/Blog/nextjs-router",
-  //   title: "KIA Seltos Blog Post In Here...!",
-  //   description: SEO_OBJ.FIRST_BLOG_POST.description,
-  //   lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-  //   publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
-  //   tags: [
-  //     { tag: "Cars", href: "url" },
-  //     { tag: "Tata", href: "url" },
-  //     { tag: "Tata Safari", href: "url" },
-  //   ],
-  //   featuredImage: textToImageWelcomeImage,
-  //   featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
-  // },
-  // {
-  //   id: 3,
-  //   url: "/Blog/nextjs-router",
-  //   title: SEO_OBJ.FIRST_BLOG_POST.title,
-  //   description: SEO_OBJ.FIRST_BLOG_POST.description,
-  //   lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-  //   publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
-  //   tags: [
-  //     { tag: "Cars", href: "url" },
-  //     { tag: "Tata", href: "url" },
-  //     { tag: "Tata Safari", href: "url" },
-  //   ],
-  //   featuredImage: textToImageWelcomeImage,
-  //   featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
-  // },
-
-  // {
-  //   id: 4,
-  //   url: "/Blog/nextjs-router",
-  //   title: "TATA ADAS Features",
-  //   description: "lorem Karunakar simple Description",
-  //   lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-  //   publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
-  //   tags: [
-  //     { tag: "Cars", href: "url" },
-  //     { tag: "Tata", href: "url" },
-  //     { tag: "Tata Safari", href: "url" },
-  //   ],
-  //   featuredImage: textToImageWelcomeImage,
-  //   featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
-  // },
-
-  // {
-  //   id: 5,
-  //   url: "/Blog/nextjs-router",
-  //   title: "Tata Safari Blog Post",
-  //   description: "lorem Karunakar simple Description",
-  //   lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-  //   publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
-  //   tags: [
-  //     { tag: "Cars", href: "url" },
-  //     { tag: "Tata", href: "url" },
-  //     { tag: "Tata Safari", href: "url" },
-  //   ],
-  //   featuredImage: textToImageWelcomeImage,
-  //   featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
-  // },
-
-  // {
-  //   id: 6,
-  //   url: "/Blog/nextjs-router",
-  //   title: "Nextjs Router, This is the wonderfull place to learn bro...!",
-  //   description: SEO_OBJ.FIRST_BLOG_POST.description,
-  //   lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-  //   publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
-  //   tags: [
-  //     { tag: "Cars", href: "url" },
-  //     { tag: "Tata", href: "url" },
-  //     { tag: "Tata Safari", href: "url" },
-  //   ],
-  //   featuredImage: textToImageWelcomeImage,
-  //   featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
-  // },
-  // {
-  //   id: 7,
-  //   url: "/cars/tata/tata-harrier",
-  //   title: "Tata Harrier, This is the wonderfull place to Tata Harrier...!",
-  //   description: SEO_OBJ.FIRST_BLOG_POST.description,
-  //   lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-  //   publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
-  //   tags: [
-  //     { tag: "Cars", href: "url" },
-  //     { tag: "Tata", href: "url" },
-  //     { tag: "Tata Safari", href: "url" },
-  //   ],
-  //   featuredImage: textToImageWelcomeImage,
-  //   featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
-  // },
-
-  // {
-  //   id: 8,
-  //   url: "/cars/tata/tata_safari",
-  //   title: "Tata Safari Blog Post In Here...!",
-  //   description: SEO_OBJ.FIRST_BLOG_POST.description,
-  //   lastUpdateTime: SEO_OBJ.FIRST_BLOG_POST.lastUpdateTime,
-  //   publishedTime: SEO_OBJ.FIRST_BLOG_POST.publishedTime,
-  //   tags: [
-  //     { tag: "Cars", href: "url" },
-  //     { tag: "Tata", href: "url" },
-  //     { tag: "Tata Safari", href: "url" },
-  //   ],
-  //   featuredImage: textToImageWelcomeImage,
-  //   featuredImageAltText: SEO_OBJ.FIRST_BLOG_POST.featuredImageAltText,
+  //   id: 1,
+  //   url: SEO_OBJ.TATA_SAFARI_BLOG_POST.relativeURL,
+  //   title: SEO_OBJ.TATA_SAFARI_BLOG_POST.title,
+  //   description: SEO_OBJ.TATA_SAFARI_BLOG_POST.description,
+  //   lastUpdateTime: SEO_OBJ.TATA_SAFARI_BLOG_POST.lastUpdateTime,
+  //   publishedTime: SEO_OBJ.TATA_SAFARI_BLOG_POST.publishedTime,
+  //   tags: SEO_OBJ.TATA_SAFARI_BLOG_POST.tags,
+  //   featuredImage: SEO_OBJ.HOME_PAGE.featuredImage,
+  //   featuredImageAltText: SEO_OBJ.TATA_SAFARI_BLOG_POST.featuredImageAltText,
   // },
 ];

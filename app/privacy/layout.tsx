@@ -8,7 +8,7 @@ const PrivacyPageLayoutUI = (props: any) => {
   return (
     <>
       <section
-        className="p-7 mt-10 mb-4 prose-lg prose-slate md:prose-lg lg:prose-xl dark:prose-invert  lg:max-w-screen-lg m-auto   prose-h1:leading-slug md:prose-img:h-[520px]  prose-img:rounded-lg min-h-[64vh] "
+        className="p-7 mt-20 mb-4 prose-lg prose-slate md:prose-lg lg:prose-xl dark:prose-invert  lg:max-w-screen-lg m-auto   prose-h1:leading-slug md:prose-img:h-[520px]  prose-img:rounded-lg min-h-[64vh] "
         id="top"
       >
         {props.children}
