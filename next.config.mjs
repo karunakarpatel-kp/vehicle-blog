@@ -6,6 +6,10 @@ const nextConfig = {
   // Configure `pageExtensions`` to include MDX files
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   // Optionally, add any other Next.js config below
+  env: {
+    HOME_PAGE_BASE_URL: process.env.HOME_PAGE_BASE_URL,
+    brandColor: process.env.brandColor,
+  },
 };
 
 const withMDX = createMDX({

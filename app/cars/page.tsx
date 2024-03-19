@@ -1,4 +1,4 @@
-import { CustomMetaData } from "@Components/MetaData/CustomMetaData";
+import { CustomMetaData } from "components/MetaData/CustomMetaData";
 import { SEO_OBJ, blogPostsObj } from "Essential";
 import { Metadata } from "next";
 import Image from "next/image";

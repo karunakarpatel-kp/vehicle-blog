@@ -13,17 +13,25 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "forceConsistentCasingInFileNames": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      // "@/*": ["./*"],
-      "@Components/*": ["./Components/*"],
+      // "@Components/*": ["./Components/*"],
+      "@Components/*": ["/components/*"],
       "@Navigation/*": ["./Components/NavigationBar/*"],
       "@Public/*": ["./public/*"]
     }
+
+    // "paths": {
+    //   // "@/*": ["./*"],
+    //   "@Components/*": ["./Components/*"],
+    //   "@Navigation/*": ["./Components/NavigationBar/*"],
+    //   "@Public/*": ["./public/*"]
+    // }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
