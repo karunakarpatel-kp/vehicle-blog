@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "baseUrl": ".",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -14,30 +13,18 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    // setting up the base URL
-    "baseUrl": ".",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "paths": {
-      "@Components/*": ["Components/*"],
-      "@Elements/*": ["Components/Elements/*"],
-      "@Layout/*": ["Components/Layout/*"],
-      "@Sandbox/*": ["Components/Sandbox/*"],
-      "@SEO/*": ["Components/SEO/*"],
-      "@SyntaxHighlighter/*": ["Components/SyntaxHighlighter/*"],
-      "@Theme/*": ["Components/Theme/*"],
-      "@UI/*": ["Components/UI/*"],
-      "@Public/*": ["public/*"],
-      "@TataImages/*": ["pages/cars/tata/tataImages/*"]
+      // "@/*": ["./*"],
+      "@Components/*": ["./Components/*"],
+      "@Navigation/*": ["./Components/NavigationBar/*"],
+      "@Public/*": ["./public/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "pages/_app.tsx",
-    "pages/index.tsx",
-    "Components/UI/Navigation.jsx",
-    "Components/UI/TableOfContents/TableOfContents.jsx"
-  ],
-
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
