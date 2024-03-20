@@ -23,7 +23,7 @@ export default function Home() {
                 <Image
                   src={singleBlogPost.featuredImage}
                   alt={singleBlogPost.featuredImageAltText}
-                  className="mt-3 mb-3  h-[230px] ring-1 rounded-md"
+                  className="mt-3 mb-3  h-[230px] ring-1 rounded-md bg-slate-200 dark:bg-slate-800"
                 />
                 <p className="text-xl mt-0  font-normal line-clamp-5 leading-relaxed">{singleBlogPost.description}</p>
                 <div className="flex  space-x-1 md:space-x-2 border-0 border-white flex-wrap  justify-start space-y-2 items-baseline -mt-3 ">
