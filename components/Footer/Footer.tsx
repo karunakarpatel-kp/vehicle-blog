@@ -3,6 +3,19 @@ import React from "react";
 import { FaFacebookSquare, FaTwitterSquare } from "react-icons/fa";
 import { ImInstagram } from "react-icons/im";
 import { FaPinterestSquare } from "react-icons/fa";
+import {
+  EmailIcon,
+  EmailShareButton,
+  FacebookIcon,
+  FacebookMessengerShareButton,
+  LinkedinIcon,
+  LinkedinShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+} from "next-share";
+import { SEO_OBJ } from "Essential";
 
 const Footer = () => {
   return (
@@ -18,7 +31,7 @@ const Footer = () => {
           Karunakar Patel @All Rights Reserved
         </div>
         <div className="privacyLinks border-0 border-red-800 col-span-4">
-          <ul className="list-none flex space-x-6 text-white justify-center md:justify-end mt-3">
+          <ul className="list-none flex flex-wrap px-3 md:space-x-5 text-white justify-evenly md:justify-center md:flex-wrap mt-3">
             <li>
               <Link href="/contact" className="text-white">
                 Contact Us
@@ -41,29 +54,22 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="socialShare border-yellow-600 col-span-3">
-          <ul className="list-none flex space-x-6 text-white justify-center md:justify-end mt-3">
-            <li>
-              <Link href="/" className="text-white">
-                <FaFacebookSquare size={25} />
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="text-white">
-                <FaTwitterSquare size={25} />
-              </Link>
-            </li>
-            <li>
-              <Link href="/Blog" className="text-white">
-                <ImInstagram size={23} className="pt-0" />
-              </Link>
-            </li>
-            <li>
-              <Link href="/Blog" className="text-white">
-                <FaPinterestSquare size={23} className="pt-0" />
-              </Link>
-            </li>
-          </ul>
+        <div className="border-0 flex gap-5 pl-8 col-span-3 justify-center md:justify-end">
+          <FacebookMessengerShareButton appId="" url={process.env.HOME_PAGE_BASE_URL!} title={SEO_OBJ.HOME_PAGE.title}>
+            <FacebookIcon size={34} className="rounded-md " />
+          </FacebookMessengerShareButton>
+          <WhatsappShareButton url={process.env.HOME_PAGE_BASE_URL!} title={SEO_OBJ.HOME_PAGE.title}>
+            <WhatsappIcon size={34} className="rounded-md" />
+          </WhatsappShareButton>
+          <TwitterShareButton url={process.env.HOME_PAGE_BASE_URL!} title={SEO_OBJ.HOME_PAGE.title}>
+            <TwitterIcon size={34} className="rounded-md" />
+          </TwitterShareButton>
+          <LinkedinShareButton url={process.env.HOME_PAGE_BASE_URL!} title={SEO_OBJ.HOME_PAGE.title}>
+            <LinkedinIcon size={34} className="rounded-md" />
+          </LinkedinShareButton>
+          <EmailShareButton url={process.env.HOME_PAGE_BASE_URL!} title={SEO_OBJ.HOME_PAGE.title}>
+            <EmailIcon size={34} className="rounded-md" />
+          </EmailShareButton>
         </div>
         <div className="Right border-0 border-white col-span-1 invisible">Right</div>
       </div>

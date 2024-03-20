@@ -26,11 +26,11 @@ export default function Home() {
                   className="mt-3 mb-3  h-[230px] ring-1 rounded-md"
                 />
                 <p className="text-xl mt-0  font-normal line-clamp-5 leading-relaxed">{singleBlogPost.description}</p>
-                <div className="flex space-x-4  justify-start">
+                <div className="flex  space-x-1 md:space-x-2 border-0 border-white flex-wrap  justify-start space-y-2 items-baseline -mt-3 ">
                   {singleBlogPost.tags.map((singleTag, index) => {
                     return (
                       <div
-                        className="no-underline border border-slate-100 bg-slate-100 dark:bg-slate-900 dark:border-slate-700 rounded-lg px-3 py-1 text-base"
+                        className="no-underline border border-slate-100 bg-slate-100 dark:bg-slate-900 dark:border-slate-700 rounded-lg px-3 py-1 text-base "
                         key={index}
                       >
                         {singleTag.tag}
