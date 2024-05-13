@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "components/NavigationBar/Navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "components/Footer/Footer";
 import { MdLightMode } from "react-icons/md";
 
@@ -11,16 +11,29 @@ interface RootLayoutProps {
 }
 
 const RootLayout = (props: RootLayoutProps) => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [localStorageStatus, setLocalStorageStatus] = useState(null);
+  const [darkMode, setDarkMode] = useState<any>(localStorageStatus);
+
+  useEffect(() => {
+    if (localStorage.getItem("darkMode")) {
+      const parsedLocalStorage = JSON.parse(localStorage.getItem("darkMode")!);
+      setLocalStorageStatus(parsedLocalStorage);
+      setDarkMode(parsedLocalStorage);
+    } else {
+      localStorage.setItem("darkMode", JSON.stringify(!darkMode));
+    }
+  }, [darkMode]);
+
   const onDarkModeBtnClickHandler = () => {
     setDarkMode(!darkMode);
+    localStorage.setItem("darkMode", JSON.stringify(!darkMode));
   };
 
   return (
     <html lang="en" className={darkMode ? "dark transition-colors duration-100" : "transition-all duration-300"}>
       <body className="relative p-0 m-0 bg-white dark:bg-slate-900 dark:prose-invert prose prose-stone min-h-[65vh] max-w-full border-0 border-sky-400  h-full overflow-x-hidden">
         <header>
-          <Navigation />
+          <Navigation darkMode={localStorageStatus} />
         </header>
         <main className="border-0 border-red-900 grid grid-cols-12">
           <section className="hidden md:invisible md:block md:col-span-1 border-2 border-green-800">One</section>
